@@ -1,0 +1,39 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .pages
+        .container
+            h1.common-title-h1 Список страниц
+            .page-links
+                a(target="_blank" href="index.html") Главная
+                a(target="_blank" href="catalog.html") Каталог
+                a(target="_blank" href="category.html") Категория
+                a(target="_blank" href="product-card.html") Карточка товара
+                a(target="_blank" href="cart.html") Корзина
+                a(target="_blank" href="cart-auth.html") Корзина (авторизованный)
+                a(target="_blank" href="login.html") Вход в личный кабинет
+                a(target="_blank" href="password-recovery-email.html") Восстановление пароля по почте
+                a(target="_blank" href="password-recovery-phone.html") Восстановление пароля по телефону
+                a(target="_blank" href="password-code.html") Ввод кода для восстановления
+                a(target="_blank" href="password-new.html") Создание нового пароля
+                a(target="_blank" href="register.html") Регистрация
+                a(target="_blank" href="register-complete.html") Успешная регистрация
+                a(target="_blank" href="account-profile.html") Личный кабинет (профиль)
+                a(target="_blank" href="account-orders.html") Личный кабинет (заказы)
+                a(target="_blank" href="account-subscribe.html") Личный кабинет (подписка)
+                a(target="_blank" href="account-bonus.html") Личный кабинет (бонусы)
+                a(target="_blank" href="shops.html") Магазины
+                a(target="_blank" href="news.html") Список новостей
+                a(target="_blank" href="news-single.html") Отдельная новость
+                a(target="_blank" href="news-single-no-img.html") Отдельная новость (без картинок)
+                a(target="_blank" href="about.html") О компании (блоки для наполнения)
+                a(target="_blank" href="career.html") Карьера у нас
+                a(target="_blank" href="testimonials.html") Отзывы
+                a(target="_blank" href="gift-cards.html") Подарочные сертификаты
+
+
+block footer
+    include ../components/footer

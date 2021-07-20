@@ -1,0 +1,24 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--shops
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    a(href="#").breadcrumbs__item Главная
+                    .breadcrumbs__item Наши магазины
+        .top-block.top-block--lg
+            .container
+                h1.common-title-h1.title-left Наши магазины
+        main.main-content
+            .container
+                .shops.shops--page.js-shops(data-json="data/shops-map.json")
+                    .shops__left
+                        .shops__list
+                    .shops__right
+                        .shops__map-container.map-container#page-map-container(data-json="data/shops-map.json")
+block footer
+    include ../components/footer

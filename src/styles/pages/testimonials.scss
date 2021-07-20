@@ -1,0 +1,20 @@
+.main-content--testimonials {
+  .add-testimonial {
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+}
+
+
+.testimonials {
+  margin-bottom: 50px;
+  &__item {
+    padding: 40px 35px 40px 55px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    max-width: 1040px;
+    margin-bottom: 30px;
+  }
+
+}
+

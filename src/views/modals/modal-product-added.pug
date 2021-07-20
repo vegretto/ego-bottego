@@ -1,0 +1,16 @@
+.modal.modal--product-added#modal-product-added
+    .modal__inner.modal__inner--desktop.modal__inner--bg
+        .modal-bg
+            +picture('modal-bg', 'png', '100%', '100%')
+        .modal__close-cross.js-close-modal
+            +icon('close')
+        .modal__box.modal__box--centered
+            .modal__title Спасибо
+            .modal__subtitle Товар успешно добавлен в корзину
+            a(href="#").subscribe-gift__btn.common-btn
+                span Оформить
+                +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+            .hr
+            .modal__continue-shopping.js-close-modal Продолжить покупки
+
+

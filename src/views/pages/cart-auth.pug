@@ -1,0 +1,267 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--cart
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    a(href="#").breadcrumbs__item Главная
+                    .breadcrumbs__item Корзина
+        .top-block.top-block--lg
+            .container
+                h1.common-title-h1.title-left Корзина
+        form
+            section.cart-items
+                .container
+                    .cart-items__inner
+                        .cart-items__item
+                            .cart-items__item-slider.swiper-container.js-cart-slider
+                                .slider-button.slider-button--sm.slider-button--prev
+                                    +icon('arrow')
+                                .slider-button.slider-button--sm.slider-button--next
+                                    +icon('arrow')
+                                .swiper-wrapper
+                                    .cart-items__item-slide.swiper-slide
+                                        +picture('cart1', 'png', '130', '130')
+                                    .cart-items__item-slide.swiper-slide
+                                        +picture('cart1', 'png', '130', '130')
+                                    .cart-items__item-slide.swiper-slide
+                                        +picture('cart1', 'png', '130', '130')
+                            .cart-items__item-content
+                                .cart-items__item-vbox
+                                    .cart-items__item-article (0404R035L55)
+                                    a.cart-items__item-title(href="#") Кольцо коллекции Vetrofusione
+                                .cart-items__item-bonus 50 бонусов за покупку
+                                .cart-items__item-hbox
+                                    .form-group.form-group--select
+                                        .cart-items__item-size.custom-select.js-custom-select.js-open-popup
+                                            span.custom-select__value 18
+                                            .custom-select-options.js-popup
+                                                .custom-select-option 18.5
+                                                .custom-select-option 19.5
+                                                .custom-select-option 20
+                                                .custom-select-option 21
+                                                .custom-select-option 22
+                                                .custom-select-option 23
+                                                .custom-select-option 20
+                                                .custom-select-option 21
+                                                .custom-select-option 22
+                                                .custom-select-option 23
+                                            select#cart-size2
+                                                option 18
+                                                option 18.5
+                                                option 19.5
+                                                option 20
+                                                option 21
+                                                option 22
+                                                option 23
+                                                option 20
+                                                option 21
+                                                option 22
+                                                option 23
+                                    .form-group.form-group--counter
+                                        .cart-items__item-qnty.custom-qnty.js-qnty
+                                            .custom-qnty__minus.js-qnty-minus —
+                                            input(type="number" min="1" value="1").custom-qnty__num.js-qnty-num
+                                            .custom-qnty__plus.js-qnty-plus +
+                                .cart-items__item-price 5 980 ₽
+                                .cart-items__item-favourite.favourite.js-toggle-active
+                                    +icon('heart')
+                                .cart-items__item-delete.js-cart-delete
+                                    .cart-items__item-delete-icon
+                                        +icon('trash')
+                                    .cart-items__item-delete-icon.hidden
+                                        +icon('back')
+                                    span Удалить
+                        .cart-items__item
+                            .cart-items__item-slider.swiper-container.js-cart-slider
+                                .slider-button.slider-button--sm.slider-button--prev
+                                    +icon('arrow')
+                                .slider-button.slider-button--sm.slider-button--next
+                                    +icon('arrow')
+                                .swiper-wrapper
+                                    .cart-items__item-slide.swiper-slide
+                                        +picture('cart1', 'png', '130', '130')
+                                    .cart-items__item-slide.swiper-slide
+                                        +picture('cart1', 'png', '130', '130')
+                                    .cart-items__item-slide.swiper-slide
+                                        +picture('cart1', 'png', '130', '130')
+                            .cart-items__item-content
+                                .cart-items__item-vbox
+                                    .cart-items__item-article (0404R035L55)
+                                    a.cart-items__item-title(href="#") Кольцо коллекции Vetrofusione
+                                .cart-items__item-bonus 50 бонусов за покупку
+                                .cart-items__item-hbox
+                                    .form-group.form-group--select
+                                        .cart-items__item-size.custom-select.js-custom-select.js-open-popup
+                                            span.custom-select__value 18
+                                            .custom-select-options.js-popup
+                                                .custom-select-option 18.5
+                                                .custom-select-option 19.5
+                                                .custom-select-option 20
+                                                .custom-select-option 21
+                                                .custom-select-option 22
+                                                .custom-select-option 23
+                                                .custom-select-option 20
+                                                .custom-select-option 21
+                                                .custom-select-option 22
+                                                .custom-select-option 23
+                                            select#cart-size1
+                                                option 18
+                                                option 18.5
+                                                option 19.5
+                                                option 20
+                                                option 21
+                                                option 22
+                                                option 23
+                                                option 20
+                                                option 21
+                                                option 22
+                                                option 23
+                                    .form-group.form-group--counter
+                                        .cart-items__item-qnty.custom-qnty.js-qnty
+                                            .custom-qnty__minus.js-qnty-minus —
+                                            input(type="number" min="1" value="1").custom-qnty__num.js-qnty-num
+                                            .custom-qnty__plus.js-qnty-plus +
+                                .cart-items__item-price 5 980 ₽
+                                .cart-items__item-favourite.favourite.js-toggle-active
+                                    +icon('heart')
+                                .cart-items__item-delete.js-cart-delete
+                                    .cart-items__item-delete-icon
+                                        +icon('trash')
+                                    .cart-items__item-delete-icon.hidden
+                                        +icon('back')
+                                    span Удалить
+                        .cart-items__item
+                            .cart-items__item-slider.swiper-container.js-cart-slider
+                                .slider-button.slider-button--sm.slider-button--prev
+                                    +icon('arrow')
+                                .slider-button.slider-button--sm.slider-button--next
+                                    +icon('arrow')
+                                .swiper-wrapper
+                                    .cart-items__item-slide.swiper-slide
+                                        +picture('cart1', 'png', '130', '130')
+                                    .cart-items__item-slide.swiper-slide
+                                        +picture('cart1', 'png', '130', '130')
+                                    .cart-items__item-slide.swiper-slide
+                                        +picture('cart1', 'png', '130', '130')
+                            .cart-items__item-content
+                                .cart-items__item-vbox
+                                    .cart-items__item-article (0404R035L55)
+                                    a.cart-items__item-title(href="#") Кольцо коллекции Vetrofusione
+                                .cart-items__item-bonus 50 бонусов за покупку
+                                .cart-items__item-hbox
+                                    .form-group.form-group--select
+                                        .cart-items__item-size.custom-select.js-custom-select.js-open-popup
+                                            span.custom-select__value 18
+                                            .custom-select-options.js-popup
+                                                .custom-select-option 18.5
+                                                .custom-select-option 19.5
+                                                .custom-select-option 20
+                                                .custom-select-option 21
+                                                .custom-select-option 22
+                                                .custom-select-option 23
+                                                .custom-select-option 20
+                                                .custom-select-option 21
+                                                .custom-select-option 22
+                                                .custom-select-option 23
+                                            select#cart-size0
+                                                option 18
+                                                option 18.5
+                                                option 19.5
+                                                option 20
+                                                option 21
+                                                option 22
+                                                option 23
+                                                option 20
+                                                option 21
+                                                option 22
+                                                option 23
+                                    .form-group.form-group--counter
+                                        .cart-items__item-qnty.custom-qnty.js-qnty
+                                            .custom-qnty__minus.js-qnty-minus —
+                                            input(type="number" min="1" value="1").custom-qnty__num.js-qnty-num
+                                            .custom-qnty__plus.js-qnty-plus +
+                                .cart-items__item-price 5 980 ₽
+                                .cart-items__item-favourite.favourite.js-toggle-active
+                                    +icon('heart')
+                                .cart-items__item-delete.js-cart-delete
+                                    .cart-items__item-delete-icon
+                                        +icon('trash')
+                                    .cart-items__item-delete-icon.hidden
+                                        +icon('back')
+                                    span Удалить
+
+            section.checkout
+                .container
+                    .checkout__inner
+                        .checkout__left
+                            .checkout__title.common-title-h1.title-left Оформление
+                            .checkout__row.mb
+                                 .checkout__col
+                                     +form-group-no-lb(false, 'form-group--custom-text', 'email', 'custom-input-text lowercase', 'checkout-mail', 'checkout-mail', '', true, '', 'Ваш e-mail*')
+                                     +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'checkout-name', 'checkout-name', '', true, '', 'Имя*')
+                                     +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'checkout-surname', 'checkout-surname', '', true, '', 'Фамилия*')
+                                 .checkout__col
+                                     +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'checkout-second-name', 'checkout-second-name', '', true, '', 'Отчество*')
+                                     +form-group-no-lb(false, 'form-group--custom-text', 'tel', 'custom-input-text lowercase', 'checkout-phone', 'checkout-phone', '', true, '', '+_(___) ___-__-__*')
+                                     .form-group.form-group--custom-text
+                                         input.checkout__search-input.custom-input-text.lowercase.js-city-autocomplete(type="search" placeholder="Город*")
+                                         .error-message Это поле обязательно для заполнения
+                            .checkout__row
+                                .checkout__col
+                                    .checkout__subtitle.mb Способ доставки
+                                    +form-group(false, 'form-group--radio js-radio', 'radio', 'custom-radio', 'form-group-radio', 'checkout-radio[0]', 'Почта России', false, 'custom-radio__label')
+                                    .checkout__choose-point Выбрать пункт выдачи
+                                    +form-group(false, 'form-group--radio js-radio', 'radio', 'custom-radio', 'form-group-radio', 'checkout-radio[1]', 'СДЕК', false, 'custom-radio__label')
+                                    +form-group(false, 'form-group--radio js-radio', 'radio', 'custom-radio', 'form-group-radio', 'checkout-radio[2]', 'Самовывоз', false, 'custom-radio__label')
+                                    .checkout__choose-point.js-open-modal(data-modal="modal-map") Выбрать магазин
+                                .checkout__col
+                                    .checkout__subtitle.mb Способ оплаты
+                                    span Онлайн оплата картой
+                        .checkout__right
+                            .checkout__bg
+                                +picture('checkout-bg', 'png', '100%', '100%')
+                            .checkout__subtitle Условия доставки
+                            span Бесплатная доставка при покупке от 7 000 ₽
+                            a(href="#").checkout__subtitle Условия оплаты
+                            a(href="#").checkout__subtitle Обмен и возврат товара
+                            .checkout__hr
+                            .checkout__row
+                                .checkout__subtitle Доставка
+                                .checkout__value Бесплатная
+                            .checkout__row
+                                .checkout__subtitle Стоимость покупки
+                                .checkout__value 7 500 ₽
+                            .checkout__row
+                                .checkout__subtitle Скидка баллами
+                                .checkout__value 100 ₽
+                            .checkout__row
+                                .checkout__subtitle Итого
+                                .checkout__value 7 400 ₽
+                            .checkout__hr
+                            .checkout__row
+                                .checkout__subtitle Бонусных баллов
+                                .checkout__value 5000
+                            .checkout__row
+                                span Вы можете списпать баллы за покупку, но не более 50% от стоимости покупки
+                            .checkout__row
+                                .checkout__subtitle Списать баллы:
+                            .checkout__row
+                                +form-group-no-lb(false, 'form-group--spend-bonuses form-group--custom-text', 'number', 'custom-input-text lowercase', 'checkout-spend-bonuses', 'checkout-spend-bonuses', '', true, '', 'Кол-во баллов для списания')
+                            .checkout__row
+                                .button.checkout__common-btn-simple.common-btn-simple(style="margin-top:30px") Применить
+                            .checkout__hr
+                            .form-agreement-text Нажимая на кнопку, я соглашаюсь на #[a(href="#") обработку моих персональных данных] и ознакомлен(а) с условиями #[a(href="#") политики конфиденциальности]
+                            button(type="submit").checkout__btn.common-btn
+                                span Оплатить
+                                +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+
+
+block footer
+    include ../components/footer
+block append modals
+    include ../modals/modal-map

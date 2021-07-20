@@ -1,0 +1,34 @@
+.modal.modal--testimonial#modal-testimonial
+    .modal__inner.modal__inner--desktop.modal__inner--bg
+        .modal-bg
+            +picture('modal-bg', 'png', '100%', '100%')
+        .modal__close-cross.js-close-modal
+            +icon('close')
+        form
+            .modal__box
+                .modal__title Новый отзыв к товару
+                .add-testimonial-stars
+                    .stars.js-stars(data-rating="0")
+                        .stars__icons
+                            .star.js-clickable-star
+                                span.star__icon.star__icon--active
+                                span.star__icon.star__icon--default
+                            .star.js-clickable-star
+                                span.star__icon.star__icon--active
+                                span.star__icon.star__icon--default
+                            .star.js-clickable-star
+                                span.star__icon.star__icon--active
+                                span.star__icon.star__icon--default
+                            .star.js-clickable-star
+                                span.star__icon.star__icon--active
+                                span.star__icon.star__icon--default
+                            .star.js-clickable-star
+                                span.star__icon.star__icon--active
+                                span.star__icon.star__icon--default
+                +form-group-textarea('form-group--textarea', 'custom-textarea', 'testimonials-textarea', 'testimonials-textarea', 5, '', 'Ваш отзыв')
+                .form-agreement-text Нажимая на кнопку, я соглашаюсь на #[a(href="#") обработку моих персональных данных] и ознакомлен(а) с условиями #[a(href="#") политики конфиденциальности]
+                button(type="submit").subscribe-gift__btn.common-btn
+                    span Отправить
+                    +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+
+

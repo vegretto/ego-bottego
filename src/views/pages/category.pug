@@ -1,0 +1,629 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--category
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    a(href="#").breadcrumbs__item Главная
+                    a(href="#").breadcrumbs__item Каталог
+                    .breadcrumbs__item Муранское стекло
+        section.h1-box
+            .h1-box__bg
+                +picture('h1-bg', 'png', '100%', 'auto')
+            .container
+                h1.common-title-h1 Украшения из муранского стекла
+        section.product-filter
+            .container
+                form
+                    .product-filter__inner
+                        .product-filter__top
+                            .product-filter__items
+                                .product-filter__items-box
+                                    .product-filter__title.js-open-popup Тип изделия
+                                    .product-filter__popup.product-filter__popup--type.js-popup
+                                        +form-group(false, 'product-filter__form-group form-group--radio js-filter-radio', 'radio', 'custom-radio', 'form-group-radio', 'product-filter-radio[0]', 'Колье', false, 'custom-radio__label')
+                                        +form-group(false, 'product-filter__form-group form-group--radio js-filter-radio', 'radio', 'custom-radio', 'form-group-radio', 'product-filter-radio[1]', 'Браслеты', false, 'custom-radio__label')
+                                        +form-group(false, 'product-filter__form-group form-group--radio js-filter-radio', 'radio', 'custom-radio', 'form-group-radio', 'product-filter-radio[2]', 'Серьги', false, 'custom-radio__label')
+                                        +form-group(false, 'product-filter__form-group form-group--radio js-filter-radio', 'radio', 'custom-radio', 'form-group-radio', 'product-filter-radio[3]', 'Кольца', false, 'custom-radio__label')
+                                        +form-group(false, 'product-filter__form-group form-group--radio js-filter-radio', 'radio', 'custom-radio', 'form-group-radio', 'product-filter-radio[4]', 'Часы', false, 'custom-radio__label')
+                                        +form-group(false, 'product-filter__form-group form-group--radio js-filter-radio', 'radio', 'custom-radio', 'form-group-radio', 'product-filter-radio[5]', 'Подвески', false, 'custom-radio__label')
+                                        +form-group(false, 'product-filter__form-group form-group--radio js-filter-radio', 'radio', 'custom-radio', 'form-group-radio', 'product-filter-radio[6]', 'Аксессуары', false, 'custom-radio__label')
+                                    .product-filter__item.js-filter-item
+                                        span Браслеты
+                                        .product-filter__item-bg.product-filter__item-bg--red
+                                            +picture('prod-filter-bg-red', 'png', '107', '31')
+                                .product-filter__items-box
+                                    .product-filter__title.js-open-popup Материал
+                                    .product-filter__popup.product-filter__popup--material.js-popup
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[0]', 'Муранское стекло', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[1]', 'Венецианский бисер', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[2]', 'Каучук', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[3]', 'Кожа', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[4]', 'Шанхайский барс', false, 'custom-checkbox__label')
+                                        button.popup-apply-btn.js-popup-apply Применить
+                                    .product-filter__item.js-filter-item
+                                        span Шанхайский барс
+                                        .product-filter__item-bg.product-filter__item-bg--red
+                                            +picture('prod-filter-bg-red', 'png', '107', '31')
+                                .product-filter__items-box
+                                    .product-filter__title.js-open-popup Цвет
+                                    .product-filter__popup.product-filter__popup--color.js-popup
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[5]', 'Красный', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[6]', 'Синий', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[7]', 'Розовый', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[8]', 'Серебро', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[9]', 'Серо-буро-малиновый', false, 'custom-checkbox__label')
+                                        button.popup-apply-btn.js-popup-apply Применить
+                                    .product-filter__item.js-filter-item
+                                        span Золото
+                                        .product-filter__item-bg.product-filter__item-bg--red
+                                            +picture('prod-filter-bg-red', 'png', '107', '31')
+                                    .product-filter__item.js-filter-item
+                                        span Зеленый
+                                        .product-filter__item-bg.product-filter__item-bg--red
+                                            +picture('prod-filter-bg-red', 'png', '107', '31')
+                                    .product-filter__item.js-filter-item
+                                        span Фиолетовый
+                                        .product-filter__item-bg.product-filter__item-bg--red
+                                            +picture('prod-filter-bg-red', 'png', '107', '31')
+                                .product-filter__items-box
+                                    .product-filter__title.js-open-popup Цена
+                                    .product-filter__popup.product-filter__popup--price.js-popup
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[10]', 'от 1 000 до 6 000', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[11]', 'от 6 000 до 12 000', false, 'custom-checkbox__label')
+                                        +form-group(false, 'product-filter__form-group form-group--checkbox js-filter-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'product-filter-checkbox[12]', 'от 12 000 до 18 000', false, 'custom-checkbox__label')
+                                        button.popup-apply-btn.js-popup-apply Применить
+                                    .product-filter__item.js-filter-item
+                                        span от 1 000 до 6 000
+                                        .product-filter__item-bg.product-filter__item-bg--red
+                                            +picture('prod-filter-bg-red', 'png', '107', '31')
+                            .product-filter__sortby
+                                span.product-filter__sortby-title Сортировать:
+                                .product-filter__sortby-inner
+                                    .product-filter__sortby-text.js-sort-text.js-open-popup По популярности
+                                    .product-filter__popup.js-popup
+                                        .product-filter__sort-item.js-sort-item Дешевле
+                                        .product-filter__sort-item.js-sort-item Дороже
+                                        .product-filter__sort-item.js-sort-item По популярности
+                                        .product-filter__sort-item.js-sort-item Новинки
+                        .product-filter__bottom
+                            .product-filter__mobile-wrapper
+                                .product-filter__mobile-filter.js-open-modal(data-modal="modal-mobile-filters") Фильтровать:
+                            .product-filter__clear.js-clear-filter Очистить фильтр
+                            .product-filter__quantity
+                                | Показано:
+                                span  20 из 120
+        section.product-items
+            .container
+                .product-items__inner
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+        section.subscribe-gift
+            .container
+                .subscribe-gift__inner
+                    .subscribe-gift__img
+                        +pictureAdaptive('subscribe-gift', 'png', '1200', '395')
+                    .subscribe-gift__content
+                        .subscribe-gift__content-box
+                            h2.subscribe-gift__title.common-title-h2 Подарок за регистрацию на сайте или подписку на новости
+                            .subscribe-gift__text Наша рассылка это дайджест самых ярких новостей из мира украшений. Подпишись и будь в курсе последних акций и уникальных предложений
+                            a(href="#").subscribe-gift__btn.common-btn
+                                span Подписаться
+                                +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+        section.product-items
+            .container
+                .product-items__inner
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+        section.subscribe-gift
+            .container
+                .subscribe-gift__inner
+                    .subscribe-gift__img
+                        +pictureAdaptive('subscribe-gift', 'png', '1200', '395')
+                    .subscribe-gift__content
+                        .subscribe-gift__content-box
+                            h2.subscribe-gift__title.common-title-h2 Подарок за регистрацию на сайте или подписку на новости
+                            .subscribe-gift__text Наша рассылка это дайджест самых ярких новостей из мира украшений. Подпишись и будь в курсе последних акций и уникальных предложений
+                            a(href="#").subscribe-gift__btn.common-btn
+                                span Подписаться
+                                +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+        section.product-slider-block
+            .container
+                .product-slider-block__inner
+                    .product-slider.swiper-container.js-category-slider
+                        .slider-button.slider-button--prev
+                            +icon('arrow')
+                        .slider-button.slider-button--next
+                            +icon('arrow')
+                        .swiper-wrapper
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item1', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item2', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item3', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item4', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item1', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item2', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item3', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item4', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                    .product-more
+                        .product-more-btn.common-btn
+                            span Подгрузить еще
+                            +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+        section.gift-card
+            .container
+                .gift-card__inner
+                    .gift-card__left
+                        .gift-card__bg
+                            +picture('gift-card-bg', 'png', '568', '148')
+                        h2.gift-card__title.common-title-h2 Подарочная карта EGO BOTTEGO
+                        .gift-card__text Подари возможность выбора!
+                        a(href="#").advantages__btn.common-btn
+                            span Подробнее
+                            +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                    .gift-card__right
+                        .gift-card__img
+                            +pictureAdaptive('gift-card', 'png', '550', '329')
+        section.seo-text
+            .container
+                .seo-text__title Украшения из муранского стекла из Италии, в России с 2009 года.
+                .seo-text__text На протяжении многих веков стекло с острова Мурано вызывает восхищение человечества. Муранское стекло дошло до современной эпохи в неизменном виде и по сей день остается культовым материалом. Муранское стекло, которое Bottega Murano использует в своих украшениях, производится венецианскими мастерами вручную, с соблюдением старинных технологий.
+
+block footer
+    include ../components/footer
+block append modals
+    include ../modals/modal-mobile-filters

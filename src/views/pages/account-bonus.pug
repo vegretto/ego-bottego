@@ -1,0 +1,43 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--account-bonus
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    a(href="#").breadcrumbs__item Главная
+                    .breadcrumbs__item Личный кабинет
+        .top-block.top-block--lg
+            .container
+                h1.common-title-h1.title-left Личный кабинет
+        .container
+            .main-wrapper__inner
+                aside.sidebar
+                    include ../components/sidebar-profile-navblock
+                main.main-content.main-content--account-bonus
+                    .account-bonus
+                        .account-bonus__qnty
+                            span.account-bonus__qnty-text Бонусный счет:
+                            span.account-bonus__qnty-num 2000
+                        .account-bonus__date Действует до 31.09.2021
+                        a(href="#").account-btn.common-btn
+                            span Скорее потратить
+                            +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                        .faq
+                            .faq__item
+                                .faq__q.js-slide-down Как увеличить скидку?
+                                    +icon('plus')
+                                .faq__a.js-slide-down-wrapper Вы можете оплатить до 50% стоимости заказа. Чтобы воспользоваться бонусами введите количество бонусных баллов, которое хотите применить, в поле "Применить бонусные баллы" при оформлении заказа.
+                            .faq__item
+                                .faq__q.js-slide-down Как можно потратить бонусы и оплатить ими покупку?
+                                    +icon('plus')
+                                .faq__a.js-slide-down-wrapper Вы можете оплатить до 50% стоимости заказа. Чтобы воспользоваться бонусами введите количество бонусных баллов, которое хотите применить, в поле "Применить бонусные баллы" при оформлении заказа.
+
+
+block footer
+    include ../components/footer
+block append modals
+    include ../modals/modal-testimonial

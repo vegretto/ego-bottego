@@ -1,0 +1,193 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--testimonials
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    a(href="#").breadcrumbs__item Главная
+                    a(href="#").breadcrumbs__item Покупателям
+                    .breadcrumbs__item Отзывы
+        .container
+            .main-wrapper__inner.main-wrapper__inner--single-page
+                aside.sidebar
+                    include ../components/sidebar-navblock
+                    include ../components/sidebar-textblock
+                    include ../components/sidebar-banner
+                main.main-content.main-content--single-page.main-content--testimonials
+                    .typography
+                        h1.common-title-h1.title-left Отзывы
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+                    .hr
+                    .add-testimonial
+                        .add-testimonial__box
+                            .add-testimonial__icon
+                                +icon('testimonial')
+                            .add-testimonial__text.js-scroll-to(data-scroll="add-testimonial") Оставить отзыв
+                    .testimonials
+                        .testimonials__item
+                            .testimonials-slider__user-testimonial
+                                .testimonials-slider__user-avatar
+                                    span ЕИ
+                                .testimonials-slider__user-box
+                                    .testimonials-slider__user-name Елена Иванова
+                                    .testimonials-slider__user-rating
+                                        .stars.js-stars(data-rating="3.5")
+                                            .stars__icons
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                    .testimonials-slider__user-good
+                                        | Товар:
+                                        a(href="#") «Кольцо коллекции Vetrofusione»
+                                    .testimonials-slider__user-shop
+                                        | Магазин:
+                                        span Пятигорск 2
+                                    .testimonials-slider__user-text Хороший ассортимент, всегда можно найти уникальные изделия на любой вкус. Особенно впечатлила коллекция с керамикой. Девочки всегда помогут с выбором, находят индивидуальный подход к каждому. Не могу уйти из магазина не приобретя какую-нибудь красоту. Спасибо вам большое за профессиональное обслуживание. рекомендую посетить именно этот салон их сети и зарядится положительными эмоциями.
+                                    .testimonials-slider__user-date 10 января 2021
+                            .testimonials-slider__shop-reply
+                                .testimonials-slider__shop-avatar
+                                    +picture('testimonials-avatar', 'png', '50', '50')
+                                .testimonials-slider__shop-reply-content
+                                    .testimonials-slider__shop-reply-title Ответ магазина:
+                                    .testimonials-slider__shop-reply-text Спасибо за ваш отзыв!
+                        .testimonials__item
+                            .testimonials-slider__user-testimonial
+                                .testimonials-slider__user-avatar
+                                    span ЕИ
+                                .testimonials-slider__user-box
+                                    .testimonials-slider__user-name Елена Иванова
+                                    .testimonials-slider__user-rating
+                                        .stars.js-stars(data-rating="3.5")
+                                            .stars__icons
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                    .testimonials-slider__user-good
+                                        | Товар:
+                                        a(href="#") «Кольцо коллекции Vetrofusione»
+                                    .testimonials-slider__user-shop
+                                        | Магазин:
+                                        span Пятигорск 2
+                                    .testimonials-slider__user-text Хороший ассортимент, всегда можно найти уникальные изделия на любой вкус. Особенно впечатлила коллекция с керамикой. Девочки всегда помогут с выбором, находят индивидуальный подход к каждому. Не могу уйти из магазина не приобретя какую-нибудь красоту. Спасибо вам большое за профессиональное обслуживание. рекомендую посетить именно этот салон их сети и зарядится положительными эмоциями.
+                                    .testimonials-slider__user-date 10 января 2021
+                            .testimonials-slider__shop-reply
+                                .testimonials-slider__shop-avatar
+                                    +picture('testimonials-avatar', 'png', '50', '50')
+                                .testimonials-slider__shop-reply-content
+                                    .testimonials-slider__shop-reply-title Ответ магазина:
+                                    .testimonials-slider__shop-reply-text Спасибо за ваш отзыв!
+                        .testimonials__item
+                            .testimonials-slider__user-testimonial
+                                .testimonials-slider__user-avatar
+                                    span ЕИ
+                                .testimonials-slider__user-box
+                                    .testimonials-slider__user-name Елена Иванова
+                                    .testimonials-slider__user-rating
+                                        .stars.js-stars(data-rating="3.5")
+                                            .stars__icons
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                    .testimonials-slider__user-good
+                                        | Товар:
+                                        a(href="#") «Кольцо коллекции Vetrofusione»
+                                    .testimonials-slider__user-shop
+                                        | Магазин:
+                                        span Пятигорск 2
+                                    .testimonials-slider__user-text Хороший ассортимент, всегда можно найти уникальные изделия на любой вкус. Особенно впечатлила коллекция с керамикой. Девочки всегда помогут с выбором, находят индивидуальный подход к каждому. Не могу уйти из магазина не приобретя какую-нибудь красоту. Спасибо вам большое за профессиональное обслуживание. рекомендую посетить именно этот салон их сети и зарядится положительными эмоциями.
+                                    .testimonials-slider__user-date 10 января 2021
+                            .testimonials-slider__shop-reply
+                                .testimonials-slider__shop-avatar
+                                    +picture('testimonials-avatar', 'png', '50', '50')
+                                .testimonials-slider__shop-reply-content
+                                    .testimonials-slider__shop-reply-title Ответ магазина:
+                                    .testimonials-slider__shop-reply-text Спасибо за ваш отзыв!
+                        .common-btn-wrapper
+                            a(href="#").news-btn.common-btn
+                                span Еще отзывы
+                                +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                    .wrapper-bg#add-testimonial
+                        .container.container--sm
+                            form
+                                .auth-box.auth-box--style2
+                                    h1.common-title-h1.title-center Оставить отзыв
+                                    .add-testimonial-stars
+                                        .stars.js-stars(data-rating="0")
+                                            .stars__icons
+                                                .star.js-clickable-star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star.js-clickable-star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star.js-clickable-star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star.js-clickable-star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                                .star.js-clickable-star
+                                                    span.star__icon.star__icon--active
+                                                    span.star__icon.star__icon--default
+                                    +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'testimonials-name', 'testimonials-name', '', true, '', 'Имя')
+                                    +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'testimonials-surname', 'testimonials-surname', '', true, '', 'Фамилия')
+                                    +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'testimonials-second-name', 'testimonials-second-name', '', true, '', 'Отчество')
+                                    .form-group.form-group--custom-text
+                                        input.checkout__search-input.custom-input-text.lowercase.js-city-autocomplete(type="search" placeholder="Город")
+                                        .error-message Это поле обязательно для заполнения
+                                    +form-group-textarea('form-group--textarea', 'custom-textarea', 'testimonials-textarea', 'testimonials-textarea', 5, '', 'Ваш отзыв')
+
+                                    .form-agreement-text Нажимая на кнопку, я соглашаюсь на #[a(href="#") обработку моих персональных данных] и ознакомлен(а) с условиями #[a(href="#") политики конфиденциальности]
+                                    button(type="submit").auth-box__btn.common-btn
+                                        span Отправить
+                                        +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+block footer
+    include ../components/footer
+
+
+
+
+
+
+
+

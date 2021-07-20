@@ -1,0 +1,31 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--account-subscribe
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    a(href="#").breadcrumbs__item Главная
+                    .breadcrumbs__item Личный кабинет
+        .top-block.top-block--lg
+            .container
+                h1.common-title-h1.title-left Личный кабинет
+        .container
+            .main-wrapper__inner
+                aside.sidebar
+                    include ../components/sidebar-profile-navblock
+                main.main-content.main-content--account-subscribe
+                    form
+                        +form-group(false, 'form-group--checkbox js-checkbox form-group--checkbox-inline-flex', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'account-checkbox', 'Получать новости на почту', false, 'custom-checkbox__label')
+                        button(type="submit").account-btn.common-btn
+                            span Сохранить
+                            +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                        .auth-box__text-sm Очень жаль с вами расставаться, мы будем скучать!
+                        .auth-box__text-sm Вы можете восстановить подписку на новости снова проставив чекбокс выше!
+block footer
+    include ../components/footer
+block append modals
+    include ../modals/modal-testimonial

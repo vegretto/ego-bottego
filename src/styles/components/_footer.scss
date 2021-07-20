@@ -1,0 +1,197 @@
+.footer {
+  background-color: $primary;
+  color: $white;
+  padding: 55px 0 15px;
+  @media (max-width: 600px) {
+    padding: 70px 0 35px;
+  }
+  &__top {
+    display: flex;
+    border-bottom: 1px solid #878787;
+    padding-bottom: 15px;
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      padding-bottom: 30px;
+    }
+  }
+  &__col {
+    flex-basis: 25%;
+    max-width: 25%;
+    @media (max-width: 991px) {
+      flex-basis: 50%;
+      max-width: 50%;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 600px) {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+    &--mobile-flex {
+      @media(max-width: 600px) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  &__col-box {
+    &--payments {
+      overflow-x: hidden;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+  &__title {
+    font-family: "CormorantGaramond", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    &--dropdown {
+      @media (max-width: 600px) {
+        position: relative;
+        padding: 0 0 5px;
+        border-bottom: 1px solid #626262;
+        margin-bottom: 30px;
+        transition: 0.3s ease-in-out;
+        &.opened {
+          border-bottom-color: transparent;
+          transition: 0.3s ease-in-out;
+          margin-bottom: 10px;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: -5px;
+          right: 0;
+          background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 11L6.5 6L1.5 1' stroke='%23E5E5E5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+          width: 8px;
+          height: 12px;
+        }
+      }
+    }
+  }
+  &__nav {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    &--mobile-folded {
+      @media (max-width: 600px) {
+       display: none;
+        padding-bottom: 25px;
+        &.opened {
+          border-bottom: 1px solid #626262;
+        }
+      }
+    }
+  }
+  &__nav-item {
+    font-size: 14px;
+    color: #B8B7B7;
+    margin-bottom: 3px;
+    display: block;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      text-decoration-color: #B8B7B7;
+    }
+    &.footer__nav--mobile-folded {
+      display: none;
+    }
+    &--login {
+      text-decoration-color: #B8B7B7;
+      &:hover {
+        text-decoration-color: transparent;
+      }
+    }
+    &--icon {
+      display: flex;
+      align-items: center;
+      .icon {
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        fill: #B8B7B7;
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    margin-bottom: 50px;
+    @media (max-width: 600px) {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+  &__social-item {
+    width: 56px;
+    height: 56px;
+    background-color: #5A564D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 12px;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      background-color: #b79f69;
+      transition: 0.3s ease-in-out;
+    }
+    @media (max-width: 600px) {
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    .icon {
+      width: 20px;
+      height: auto;
+      fill: $white;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 0;
+    @media (max-width: 991px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__copyright {
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  &__developers {
+    flex-shrink: 0;
+    margin-left: 30px;
+    @media (max-width: 991px) {
+      margin-left: 0;
+    }
+    @media (max-width: 600px) {
+      margin-left: 0;
+      font-size: 12px;
+      line-height: 1;
+    }
+    a {
+      color: $white;
+      &:hover {
+        text-decoration-color: $white;
+      }
+    }
+  }
+}

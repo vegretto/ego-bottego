@@ -1,0 +1,25 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--bg
+        .container.container--sm
+            form
+                .auth-box
+                    h1.common-title-h1 Регистрация
+                    .auth-box__text-sm Регистрация даст вам доступ к скидкам и бонусной программе
+                    +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'register-name', 'register-name', '', true, '', 'Имя')
+                    +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'register-surname', 'register-surname', '', true, '', 'Фамилия')
+                    +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'register-second-name', 'register-second-name', '', true, '', 'Отчество')
+                    +form-group-no-lb(false, 'form-group--custom-text', 'tel', 'custom-input-text lowercase', 'register-phone', 'register-phone', '', true, '', 'Номер телефона*')
+                    +form-group-no-lb(false, 'form-group--custom-text', 'email', 'custom-input-text lowercase', 'register-mail', 'register-mail', '', true, '', 'E-mail*')
+                    +form-group-no-lb(false, 'form-group--custom-text', 'password', 'custom-input-text lowercase', 'register-pass', 'register-pass', '', true, '', 'Пароль*')
+                    +form-group(false, 'form-group--checkbox js-checkbox form-group--checkbox-inline-flex', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'register-checkbox', 'Подписаться на новости', false, 'custom-checkbox__label')
+                    .form-agreement-text Нажимая на кнопку, я соглашаюсь на #[a(href="#") обработку моих персональных данных] и ознакомлен(а) с условиями #[a(href="#") политики конфиденциальности]
+                    button(type="submit").auth-box__btn.common-btn
+                        span Регистрация
+                        +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+block footer
+    include ../components/footer

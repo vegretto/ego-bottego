@@ -1,0 +1,166 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  max-width: 375px;
+  width: 100%;
+  background-color: #fff;
+  right: 0;
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out;
+  z-index: 3;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &.opened {
+    transform: translateX(0);
+    transition: 0.3s ease-in-out;
+  }
+  &.dd-opened {
+    overflow-y: hidden;
+  }
+  &__close-cross {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    cursor: pointer;
+    svg {
+      fill: $primary;
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &__top {
+    padding: 0 10px;
+    height: 65px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    &.show-back {
+      background-color: #DDCCA622;
+      .mobile-menu__back {
+        display: block;
+      }
+    }
+  }
+  &__back {
+    display: none;
+    padding-left: 15px;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 8px;
+      height: 12px;
+      transform: translateY(-50%);
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.5 1L1.5 6L6.5 11' stroke='%236B6B6B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+  }
+  &__middle {
+    padding: 0 10px;
+  }
+  &__nav-middle {
+    &-item {
+      padding: 18px 0;
+      border-bottom: 1px solid $gray-border;
+      cursor: pointer;
+      &:last-child {
+        border-bottom: none;
+      }
+      &-cat {
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 20px;
+          height: 20px;
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 14.999L12.5 9.99902L7.5 4.99902' stroke='%23C4C4C4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+  &__nav-cat {
+    font-family: CormorantGaramond, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+  }
+  &__bottom {
+    background: $primary;
+    flex-grow: 1;
+  }
+  &__nav-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 10px 30px;
+    &-item {
+      color: $white;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+  }
+  &__nav-dropdown {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 4;
+    padding: 30px 10px;
+    display: none;
+    &.active {
+      display: block;
+      overflow-y: auto;
+    }
+    .mobile-menu__nav-cat {
+      margin-bottom: 14px;
+    }
+  }
+  &__nav-filter {
+    margin-bottom: 18px;
+    &-type {
+      font-family: "CormorantGaramond", serif;
+      font-size: 16px;
+      font-weight: 700;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 14.999L12.5 9.99902L7.5 4.99902' stroke='%23C4C4C4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        transition: 0.3s ease-in-out;
+      }
+    }
+    &.active {
+      .mobile-menu__nav-filter-type {
+        &:after {
+          transform: rotate(90deg);
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+  &__nav-filter-subcat {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 18px;
+    line-height: 1;
+  }
+  &__nav-filter-dropdown {
+    display: none;
+  }
+}

@@ -1,0 +1,129 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--account-orders
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    a(href="#").breadcrumbs__item Главная
+                    .breadcrumbs__item Личный кабинет
+        .top-block.top-block--lg
+            .container
+                h1.common-title-h1.title-left Личный кабинет
+        .container
+            .main-wrapper__inner
+                aside.sidebar
+                    include ../components/sidebar-profile-navblock
+                main.main-content.main-content--account-orders
+                    .account-orders
+                        .account-orders__header
+                            .account-orders__header-cell Номер
+                            .account-orders__header-cell Дата
+                            .account-orders__header-cell Стоимость
+                            .account-orders__header-cell Статус
+                        .account-orders__items
+                            .account-orders__item
+                                .account-orders__row.js-slide-down.opened
+                                    .account-orders__cell 123
+                                    .account-orders__cell 19.07.2019
+                                    .account-orders__cell 25 000 ₽
+                                    .account-orders__cell.account-orders__status-blue Ожидает обработки
+                                    .account-orders__arrow
+                                        +icon('arrow')
+                                .account-orders__product-wrapper.js-slide-down-wrapper.opened
+                                    .account-orders__product
+                                        .account-orders__left
+                                            +picture('cart1', 'png', '130', '130')
+                                        .account-orders__right
+                                            .account-orders__right-top
+                                                .v-box
+                                                    .account-orders__article (0404R035L55)
+                                                    .account-orders__title Кольцо коллекции Vetrofusione
+                                                .account-orders__inner-table
+                                                    .account-orders__inner-header
+                                                        .account-orders__inner-header-cell Количество
+                                                        .account-orders__inner-header-cell Размер
+                                                        .account-orders__inner-header-cell Сумма
+                                                        .account-orders__inner-header-cell Статус
+                                                        .account-orders__inner-header-cell Самовывоз
+                                                    .account-orders__inner-data
+                                                        .account-orders__inner-cell 1
+                                                        .account-orders__inner-cell 18
+                                                        .account-orders__inner-cell 25 000 ₽
+                                                        .account-orders__inner-cell.account-orders__status-blue Ожидает обработки
+                                                        .account-orders__inner-cell Магазин  1 Пятигорск, ул, Вишневая дом 8
+                                            .account-orders__right-bottom
+                                                .account-orders__add-testimonial.js-open-modal(data-modal="modal-testimonial") Оставить отзыв
+                            .account-orders__item
+                                .account-orders__row.js-slide-down.opened
+                                    .account-orders__cell 123
+                                    .account-orders__cell 19.07.2019
+                                    .account-orders__cell 25 000 ₽
+                                    .account-orders__cell.account-orders__status-red Закрыт
+                                    .account-orders__arrow
+                                        +icon('arrow')
+                                .account-orders__product-wrapper.js-slide-down-wrapper.opened
+                                    .account-orders__product.order-done
+                                        .account-orders__left
+                                            +picture('cart1', 'png', '130', '130')
+                                        .account-orders__right
+                                            .account-orders__right-top
+                                                .vbox
+                                                    .account-orders__article (0404R035L55)
+                                                    .account-orders__title Кольцо коллекции Vetrofusione
+                                                .account-orders__inner-table
+                                                    .account-orders__inner-header
+                                                        .account-orders__inner-header-cell Количество
+                                                        .account-orders__inner-header-cell Размер
+                                                        .account-orders__inner-header-cell Сумма
+                                                        .account-orders__inner-header-cell Статус
+                                                        .account-orders__inner-header-cell Самовывоз
+                                                    .account-orders__inner-data
+                                                        .account-orders__inner-cell 1
+                                                        .account-orders__inner-cell 18
+                                                        .account-orders__inner-cell 25 000 ₽
+                                                        .account-orders__inner-cell.account-orders__status-red Закрыт
+                                                        .account-orders__inner-cell Магазин  1 Пятигорск, ул, Вишневая дом 8
+                                            .account-orders__right-bottom
+                                                .account-orders__add-testimonial.js-open-modal(data-modal="modal-testimonial") Оставить отзыв
+                            .account-orders__item
+                                .account-orders__row.js-slide-down
+                                    .account-orders__cell 123
+                                    .account-orders__cell 19.07.2019
+                                    .account-orders__cell 25 000 ₽
+                                    .account-orders__cell.account-orders__status-green В работе
+                                    .account-orders__arrow
+                                        +icon('arrow')
+                                .account-orders__product-wrapper.js-slide-down-wrapper
+                                    .account-orders__product
+                                        .account-orders__left
+                                            +picture('cart1', 'png', '130', '130')
+                                        .account-orders__right
+                                            .account-orders__right-top
+                                                .vbox
+                                                    .account-orders__article (0404R035L55)
+                                                    .account-orders__title Кольцо коллекции Vetrofusione
+                                                .account-orders__inner-table
+                                                    .account-orders__inner-header
+                                                        .account-orders__inner-header-cell Количество
+                                                        .account-orders__inner-header-cell Размер
+                                                        .account-orders__inner-header-cell Сумма
+                                                        .account-orders__inner-header-cell Статус
+                                                        .account-orders__inner-header-cell Самовывоз
+                                                    .account-orders__inner-data
+                                                        .account-orders__inner-cell 1
+                                                        .account-orders__inner-cell 18
+                                                        .account-orders__inner-cell 25 000 ₽
+                                                        .account-orders__inner-cell.account-orders__status-green В работе
+                                                        .account-orders__inner-cell Магазин  1 Пятигорск, ул, Вишневая дом 8
+                                            .account-orders__right-bottom
+                                                .account-orders__add-testimonial.js-open-modal(data-modal="modal-testimonial") Оставить отзыв
+
+
+block footer
+    include ../components/footer
+block append modals
+    include ../modals/modal-testimonial

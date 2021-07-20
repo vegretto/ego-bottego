@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Эго Боттего</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="styles/style.min.css" type="text/css">
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__top">
+				<div class="container">
+					<div class="header__top-inner">
+						<div class="header__controls">
+							<div class="header__control header__mob-menu js-open-mob-menu">
+								<svg class="icon icon-mobile-menu">
+									<use xlink:href="img/svg/sprite.svg#mobile-menu"></use>
+								</svg>
+							</div>
+							<div class="header__control header__search js-header-search">
+								<div class="header__control-icon">
+									<svg class="icon icon-search">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</div><span>Поиск</span>
+								<input class="header__search-input js-easy-autocomplete" type="search" placeholder="Поиск">
+							</div><a class="header__control header__shops" href="#">
+								<div class="header__control-icon">
+									<svg class="icon icon-placemark">
+										<use xlink:href="img/svg/sprite.svg#placemark"></use>
+									</svg>
+								</div><span>Магазины (<span>15</span>)</span></a>
+						</div><a class="header__logo" href="/"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 153 105&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;153&quot; height=&quot;105&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/svg/logo.svg" alt="image" width="153" height="105"/>
+							<div class="header__logo-descriptor">Украшения и аксессуары из италии</div></a>
+						<div class="header__controls header__controls--end"><a class="header__control header__login" href="#">
+								<div class="header__control-icon">
+									<svg class="icon icon-login">
+										<use xlink:href="img/svg/sprite.svg#login"></use>
+									</svg>
+								</div><span>Войти</span></a><a class="header__control header__favourite" href="#">
+								<div class="header__control-icon">
+									<svg class="icon icon-like">
+										<use xlink:href="img/svg/sprite.svg#like"></use>
+									</svg>
+								</div>
+								<div class="header__control-num">25</div></a><a class="header__control header__cart" href="#">
+								<div class="header__control-icon">
+									<svg class="icon icon-cart">
+										<use xlink:href="img/svg/sprite.svg#cart"></use>
+									</svg>
+								</div>
+								<div class="header__control-num">4</div></a></div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="container">
+					<div class="header__bottom-inner">
+						<nav class="header__nav"><a class="header__nav-item js-menu-dropdown" href="#" data-dropdown-id="header-dropdown-1">Муранское стекло</a><a class="header__nav-item js-menu-dropdown" href="#" data-dropdown-id="header-dropdown-2">Майорский жемчуг</a><a class="header__nav-item js-menu-dropdown" href="#" data-dropdown-id="header-dropdown-3">Украшения из керамики</a><a class="header__nav-item js-menu-dropdown" href="#" data-dropdown-id="header-dropdown-4">Оригинальная оптика</a></nav>
+					</div>
+				</div>
+				<div class="header__dropdown" id="header-dropdown-1">
+					<div class="container">
+						<div class="header__dropdown-inner">
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a><a class="header__dropdown-item" href="#">Серьги</a><a class="header__dropdown-item" href="#">Колье</a><a class="header__dropdown-item" href="#">Часы</a><a class="header__dropdown-item" href="#">Подвески</a><a class="header__dropdown-item" href="#">Аксессуары</a></div>
+							</div>
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a></div>
+							</div>
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a><a class="header__dropdown-item" href="#">Серьги</a><a class="header__dropdown-item" href="#">Колье</a></div>
+							</div>
+							<div class="header__dropdown-img">
+								<picture>
+									<source data-srcset="img/dropdown1.webp" type="image/webp"/><img class="lazyload" data-src="img/dropdown1.png" alt="image" width="409" height="248"/>
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__dropdown" id="header-dropdown-2">
+					<div class="container">
+						<div class="header__dropdown-inner">
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a><a class="header__dropdown-item" href="#">Серьги</a></div>
+							</div>
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a></div>
+							</div>
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a><a class="header__dropdown-item" href="#">Серьги</a></div>
+							</div>
+							<div class="header__dropdown-img">
+								<picture>
+									<source data-srcset="img/dropdown1.webp" type="image/webp"/><img class="lazyload" data-src="img/dropdown1.png" alt="image" width="409" height="248"/>
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__dropdown" id="header-dropdown-3">
+					<div class="container">
+						<div class="header__dropdown-inner">
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a><a class="header__dropdown-item" href="#">Серьги</a><a class="header__dropdown-item" href="#">Колье</a><a class="header__dropdown-item" href="#">Часы</a><a class="header__dropdown-item" href="#">Подвески</a><a class="header__dropdown-item" href="#">Аксессуары</a></div>
+							</div>
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a><a class="header__dropdown-item" href="#">Серьги</a><a class="header__dropdown-item" href="#">Колье</a><a class="header__dropdown-item" href="#">Часы</a><a class="header__dropdown-item" href="#">Подвески</a><a class="header__dropdown-item" href="#">Аксессуары</a></div>
+							</div>
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a></div>
+							</div>
+							<div class="header__dropdown-img">
+								<picture>
+									<source data-srcset="img/dropdown1.webp" type="image/webp"/><img class="lazyload" data-src="img/dropdown1.png" alt="image" width="409" height="248"/>
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__dropdown" id="header-dropdown-4">
+					<div class="container">
+						<div class="header__dropdown-inner">
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a><a class="header__dropdown-item" href="#">Серьги</a><a class="header__dropdown-item" href="#">Колье</a><a class="header__dropdown-item" href="#">Часы</a><a class="header__dropdown-item" href="#">Подвески</a><a class="header__dropdown-item" href="#">Аксессуары</a></div>
+							</div>
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a></div>
+							</div>
+							<div class="header__dropdown-col">
+								<div class="header__dropdown-subtitle">По типу изделия</div>
+								<div class="header__dropdown-items"><a class="header__dropdown-item" href="#">Браслеты</a><a class="header__dropdown-item" href="#">Кольца</a><a class="header__dropdown-item" href="#">Серьги</a><a class="header__dropdown-item" href="#">Колье</a></div>
+							</div>
+							<div class="header__dropdown-img">
+								<picture>
+									<source data-srcset="img/dropdown1.webp" type="image/webp"/><img class="lazyload" data-src="img/dropdown1.png" alt="image" width="409" height="248"/>
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="main-wrapper main-wrapper--cart">
+			<div class="breadcrumbs">
+				<div class="container">
+					<div class="breadcrumbs__inner"><a class="breadcrumbs__item" href="#">Главная</a>
+						<div class="breadcrumbs__item">Корзина</div>
+					</div>
+				</div>
+			</div>
+			<div class="top-block top-block--lg">
+				<div class="container">
+					<h1 class="common-title-h1 title-left">Корзина</h1>
+				</div>
+			</div>
+			<form>
+				<section class="cart-items">
+					<div class="container">
+						<div class="cart-items__inner">
+							<div class="cart-items__item">
+								<div class="cart-items__item-slider swiper-container js-cart-slider">
+									<div class="slider-button slider-button--sm slider-button--prev">
+										<svg class="icon icon-arrow">
+											<use xlink:href="img/svg/sprite.svg#arrow"></use>
+										</svg>
+									</div>
+									<div class="slider-button slider-button--sm slider-button--next">
+										<svg class="icon icon-arrow">
+											<use xlink:href="img/svg/sprite.svg#arrow"></use>
+										</svg>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="cart-items__item-slide swiper-slide">
+											<picture>
+												<source data-srcset="img/cart1.webp" type="image/webp"/><img class="lazyload" data-src="img/cart1.png" alt="image" width="130" height="130"/>
+											</picture>
+										</div>
+										<div class="cart-items__item-slide swiper-slide">
+											<picture>
+												<source data-srcset="img/cart1.webp" type="image/webp"/><img class="lazyload" data-src="img/cart1.png" alt="image" width="130" height="130"/>
+											</picture>
+										</div>
+										<div class="cart-items__item-slide swiper-slide">
+											<picture>
+												<source data-srcset="img/cart1.webp" type="image/webp"/><img class="lazyload" data-src="img/cart1.png" alt="image" width="130" height="130"/>
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="cart-items__item-content">
+									<div class="cart-items__item-vbox">
+										<div class="cart-items__item-article">(0404R035L55)</div><a class="cart-items__item-title" href="#">Кольцо коллекции Vetrofusione</a>
+									</div>
+									<div class="cart-items__item-bonus">50 бонусов за покупку</div>
+									<div class="cart-items__item-hbox">
+										<div class="form-group form-group--select">
+											<div class="cart-items__item-size custom-select js-custom-select js-open-popup"><span class="custom-select__value">18</span>
+												<div class="custom-select-options js-popup">
+													<div class="custom-select-option">18.5</div>
+													<div class="custom-select-option">19.5</div>
+													<div class="custom-select-option">20</div>
+													<div class="custom-select-option">21</div>
+													<div class="custom-select-option">22</div>
+													<div class="custom-select-option">23</div>
+													<div class="custom-select-option">20</div>
+													<div class="custom-select-option">21</div>
+													<div class="custom-select-option">22</div>
+													<div class="custom-select-option">23</div>
+												</div>
+												<select id="cart-size2">
+													<option>18</option>
+													<option>18.5</option>
+													<option>19.5</option>
+													<option>20</option>
+													<option>21</option>
+													<option>22</option>
+													<option>23</option>
+													<option>20</option>
+													<option>21</option>
+													<option>22</option>
+													<option>23</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group form-group--counter">
+											<div class="cart-items__item-qnty custom-qnty js-qnty">
+												<div class="custom-qnty__minus js-qnty-minus">—</div>
+												<input class="custom-qnty__num js-qnty-num" type="number" min="1" value="1">
+												<div class="custom-qnty__plus js-qnty-plus">+</div>
+											</div>
+										</div>
+									</div>
+									<div class="cart-items__item-price">5 980 ₽</div>
+									<div class="cart-items__item-favourite favourite js-toggle-active">
+										<svg class="icon icon-heart">
+											<use xlink:href="img/svg/sprite.svg#heart"></use>
+										</svg>
+									</div>
+									<div class="cart-items__item-delete js-cart-delete">
+										<div class="cart-items__item-delete-icon">
+											<svg class="icon icon-trash">
+												<use xlink:href="img/svg/sprite.svg#trash"></use>
+											</svg>
+										</div>
+										<div class="cart-items__item-delete-icon hidden">
+											<svg class="icon icon-back">
+												<use xlink:href="img/svg/sprite.svg#back"></use>
+											</svg>
+										</div><span>Удалить</span>
+									</div>
+								</div>
+							</div>
+							<div class="cart-items__item">
+								<div class="cart-items__item-slider swiper-container js-cart-slider">
+									<div class="slider-button slider-button--sm slider-button--prev">
+										<svg class="icon icon-arrow">
+											<use xlink:href="img/svg/sprite.svg#arrow"></use>
+										</svg>
+									</div>
+									<div class="slider-button slider-button--sm slider-button--next">
+										<svg class="icon icon-arrow">
+											<use xlink:href="img/svg/sprite.svg#arrow"></use>
+										</svg>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="cart-items__item-slide swiper-slide">
+											<picture>
+												<source data-srcset="img/cart1.webp" type="image/webp"/><img class="lazyload" data-src="img/cart1.png" alt="image" width="130" height="130"/>
+											</picture>
+										</div>
+										<div class="cart-items__item-slide swiper-slide">
+											<picture>
+												<source data-srcset="img/cart1.webp" type="image/webp"/><img class="lazyload" data-src="img/cart1.png" alt="image" width="130" height="130"/>
+											</picture>
+										</div>
+										<div class="cart-items__item-slide swiper-slide">
+											<picture>
+												<source data-srcset="img/cart1.webp" type="image/webp"/><img class="lazyload" data-src="img/cart1.png" alt="image" width="130" height="130"/>
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="cart-items__item-content">
+									<div class="cart-items__item-vbox">
+										<div class="cart-items__item-article">(0404R035L55)</div><a class="cart-items__item-title" href="#">Кольцо коллекции Vetrofusione</a>
+									</div>
+									<div class="cart-items__item-bonus">50 бонусов за покупку</div>
+									<div class="cart-items__item-hbox">
+										<div class="form-group form-group--select">
+											<div class="cart-items__item-size custom-select js-custom-select js-open-popup"><span class="custom-select__value">18</span>
+												<div class="custom-select-options js-popup">
+													<div class="custom-select-option">18.5</div>
+													<div class="custom-select-option">19.5</div>
+													<div class="custom-select-option">20</div>
+													<div class="custom-select-option">21</div>
+													<div class="custom-select-option">22</div>
+													<div class="custom-select-option">23</div>
+													<div class="custom-select-option">20</div>
+													<div class="custom-select-option">21</div>
+													<div class="custom-select-option">22</div>
+													<div class="custom-select-option">23</div>
+												</div>
+												<select id="cart-size1">
+													<option>18</option>
+													<option>18.5</option>
+													<option>19.5</option>
+													<option>20</option>
+													<option>21</option>
+													<option>22</option>
+													<option>23</option>
+													<option>20</option>
+													<option>21</option>
+													<option>22</option>
+													<option>23</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group form-group--counter">
+											<div class="cart-items__item-qnty custom-qnty js-qnty">
+												<div class="custom-qnty__minus js-qnty-minus">—</div>
+												<input class="custom-qnty__num js-qnty-num" type="number" min="1" value="1">
+												<div class="custom-qnty__plus js-qnty-plus">+</div>
+											</div>
+										</div>
+									</div>
+									<div class="cart-items__item-price">5 980 ₽</div>
+									<div class="cart-items__item-favourite favourite js-toggle-active">
+										<svg class="icon icon-heart">
+											<use xlink:href="img/svg/sprite.svg#heart"></use>
+										</svg>
+									</div>
+									<div class="cart-items__item-delete js-cart-delete">
+										<div class="cart-items__item-delete-icon">
+											<svg class="icon icon-trash">
+												<use xlink:href="img/svg/sprite.svg#trash"></use>
+											</svg>
+										</div>
+										<div class="cart-items__item-delete-icon hidden">
+											<svg class="icon icon-back">
+												<use xlink:href="img/svg/sprite.svg#back"></use>
+											</svg>
+										</div><span>Удалить</span>
+									</div>
+								</div>
+							</div>
+							<div class="cart-items__item">
+								<div class="cart-items__item-slider swiper-container js-cart-slider">
+									<div class="slider-button slider-button--sm slider-button--prev">
+										<svg class="icon icon-arrow">
+											<use xlink:href="img/svg/sprite.svg#arrow"></use>
+										</svg>
+									</div>
+									<div class="slider-button slider-button--sm slider-button--next">
+										<svg class="icon icon-arrow">
+											<use xlink:href="img/svg/sprite.svg#arrow"></use>
+										</svg>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="cart-items__item-slide swiper-slide">
+											<picture>
+												<source data-srcset="img/cart1.webp" type="image/webp"/><img class="lazyload" data-src="img/cart1.png" alt="image" width="130" height="130"/>
+											</picture>
+										</div>
+										<div class="cart-items__item-slide swiper-slide">
+											<picture>
+												<source data-srcset="img/cart1.webp" type="image/webp"/><img class="lazyload" data-src="img/cart1.png" alt="image" width="130" height="130"/>
+											</picture>
+										</div>
+										<div class="cart-items__item-slide swiper-slide">
+											<picture>
+												<source data-srcset="img/cart1.webp" type="image/webp"/><img class="lazyload" data-src="img/cart1.png" alt="image" width="130" height="130"/>
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="cart-items__item-content">
+									<div class="cart-items__item-vbox">
+										<div class="cart-items__item-article">(0404R035L55)</div><a class="cart-items__item-title" href="#">Кольцо коллекции Vetrofusione</a>
+									</div>
+									<div class="cart-items__item-bonus">50 бонусов за покупку</div>
+									<div class="cart-items__item-hbox">
+										<div class="form-group form-group--select">
+											<div class="cart-items__item-size custom-select js-custom-select js-open-popup"><span class="custom-select__value">18</span>
+												<div class="custom-select-options js-popup">
+													<div class="custom-select-option">18.5</div>
+													<div class="custom-select-option">19.5</div>
+													<div class="custom-select-option">20</div>
+													<div class="custom-select-option">21</div>
+													<div class="custom-select-option">22</div>
+													<div class="custom-select-option">23</div>
+													<div class="custom-select-option">20</div>
+													<div class="custom-select-option">21</div>
+													<div class="custom-select-option">22</div>
+													<div class="custom-select-option">23</div>
+												</div>
+												<select id="cart-size0">
+													<option>18</option>
+													<option>18.5</option>
+													<option>19.5</option>
+													<option>20</option>
+													<option>21</option>
+													<option>22</option>
+													<option>23</option>
+													<option>20</option>
+													<option>21</option>
+													<option>22</option>
+													<option>23</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group form-group--counter">
+											<div class="cart-items__item-qnty custom-qnty js-qnty">
+												<div class="custom-qnty__minus js-qnty-minus">—</div>
+												<input class="custom-qnty__num js-qnty-num" type="number" min="1" value="1">
+												<div class="custom-qnty__plus js-qnty-plus">+</div>
+											</div>
+										</div>
+									</div>
+									<div class="cart-items__item-price">5 980 ₽</div>
+									<div class="cart-items__item-favourite favourite js-toggle-active">
+										<svg class="icon icon-heart">
+											<use xlink:href="img/svg/sprite.svg#heart"></use>
+										</svg>
+									</div>
+									<div class="cart-items__item-delete js-cart-delete">
+										<div class="cart-items__item-delete-icon">
+											<svg class="icon icon-trash">
+												<use xlink:href="img/svg/sprite.svg#trash"></use>
+											</svg>
+										</div>
+										<div class="cart-items__item-delete-icon hidden">
+											<svg class="icon icon-back">
+												<use xlink:href="img/svg/sprite.svg#back"></use>
+											</svg>
+										</div><span>Удалить</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="checkout">
+					<div class="container">
+						<div class="checkout__inner">
+							<div class="checkout__left">
+								<div class="checkout__title common-title-h1 title-left">Оформление</div>
+								<div class="checkout__row mb">
+									<div class="checkout__col">
+										<div class="form-group form-group--custom-text">
+											<input class="custom-input-text lowercase" type="email" name="checkout-mail" id="checkout-mail" placeholder="Ваш e-mail*"/>
+											<div class="error-message">Это поле обязательно для заполнения</div>
+										</div>
+										<div class="form-group form-group--custom-text">
+											<input class="custom-input-text lowercase" type="text" name="checkout-name" id="checkout-name" placeholder="Имя*"/>
+											<div class="error-message">Это поле обязательно для заполнения</div>
+										</div>
+										<div class="form-group form-group--custom-text">
+											<input class="custom-input-text lowercase" type="text" name="checkout-surname" id="checkout-surname" placeholder="Фамилия*"/>
+											<div class="error-message">Это поле обязательно для заполнения</div>
+										</div>
+									</div>
+									<div class="checkout__col">
+										<div class="form-group form-group--custom-text">
+											<input class="custom-input-text lowercase" type="text" name="checkout-second-name" id="checkout-second-name" placeholder="Отчество*"/>
+											<div class="error-message">Это поле обязательно для заполнения</div>
+										</div>
+										<div class="form-group form-group--custom-text">
+											<input class="custom-input-text lowercase" type="tel" name="checkout-phone" id="checkout-phone" placeholder="+_(___) ___-__-__*"/>
+											<div class="error-message">Это поле обязательно для заполнения</div>
+										</div>
+										<div class="form-group form-group--custom-text">
+											<input class="checkout__search-input custom-input-text lowercase js-city-autocomplete" type="search" placeholder="Город*">
+											<div class="error-message">Это поле обязательно для заполнения</div>
+										</div>
+									</div>
+								</div>
+								<div class="checkout__row">
+									<div class="checkout__col">
+										<div class="checkout__subtitle mb">Способ доставки</div>
+										<div class="form-group form-group--radio js-radio">
+											<label class="custom-radio__label" for="checkout-radio[0]">Почта России</label>
+											<input class="custom-radio" type="radio" name="form-group-radio" id="checkout-radio[0]"/>
+										</div>
+										<div class="checkout__choose-point">Выбрать пункт выдачи</div>
+										<div class="form-group form-group--radio js-radio">
+											<label class="custom-radio__label" for="checkout-radio[1]">СДЕК</label>
+											<input class="custom-radio" type="radio" name="form-group-radio" id="checkout-radio[1]"/>
+										</div>
+										<div class="form-group form-group--radio js-radio">
+											<label class="custom-radio__label" for="checkout-radio[2]">Самовывоз</label>
+											<input class="custom-radio" type="radio" name="form-group-radio" id="checkout-radio[2]"/>
+										</div>
+										<div class="checkout__choose-point js-open-modal" data-modal="modal-map">Выбрать магазин</div>
+									</div>
+									<div class="checkout__col">
+										<div class="checkout__subtitle mb">Способ оплаты</div><span>Онлайн оплата картой</span>
+									</div>
+								</div>
+							</div>
+							<div class="checkout__right">
+								<div class="checkout__bg">
+									<picture>
+										<source data-srcset="img/checkout-bg.webp" type="image/webp"/><img class="lazyload" data-src="img/checkout-bg.png" alt="image" width="100%" height="100%"/>
+									</picture>
+								</div>
+								<div class="checkout__subtitle">Условия доставки</div><span>Бесплатная доставка при покупке от 7 000 ₽</span><a class="checkout__subtitle" href="#">Условия оплаты</a>
+								<div class="checkout__subtitle">Обмен и возврат товара</div>
+								<div class="checkout__hr"></div>
+								<div class="checkout__row">
+									<div class="checkout__subtitle">Доставка</div>
+									<div class="checkout__value">Бесплатная</div>
+								</div>
+								<div class="checkout__row">
+									<div class="checkout__subtitle">Стоимость покупки</div>
+									<div class="checkout__value">7 500 ₽</div>
+								</div>
+								<div class="checkout__row">
+									<div class="checkout__subtitle">Итого</div>
+									<div class="checkout__value">7 500 ₽</div>
+								</div>
+								<div class="checkout__hr"></div><a class="checkout__subtitle" href="#">Личный кабинет</a><span>Авторизуйтесь, чтобы применить бонусы к покупке</span>
+								<div class="checkout__hr"></div>
+								<div class="form-agreement-text">Нажимая на кнопку, я соглашаюсь на <a href="#">обработку моих персональных данных</a> и ознакомлен(а) с условиями <a href="#">политики конфиденциальности</a></div>
+								<button class="checkout__btn common-btn" type="submit"><span>Оплатить</span>
+									<picture>
+										<source data-srcset="img//svg/common-btn-sm.svg" media="(max-width: 768px)"/><img class="lazyload" data-src="img//svg/common-btn.svg" alt="image" width="237" height="78"/>
+									</picture>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</form>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__top">
+						<div class="footer__col">
+							<div class="footer__title footer__title--dropdown js-footer-dropdown">Покупателям</div>
+							<nav class="footer__nav footer__nav--mobile-folded"><a class="footer__nav-item" href="#">О компании</a><a class="footer__nav-item" href="#">Карьера у нас</a><a class="footer__nav-item" href="#">Техники изготовления</a><a class="footer__nav-item" href="#">Бонусная программа</a><a class="footer__nav-item" href="#">Подарочные сертификаты</a></nav>
+							<div class="footer__title footer__title--dropdown js-footer-dropdown">Мой кабинет</div>
+							<nav class="footer__nav footer__nav--mobile-folded"><a class="footer__nav-item footer__nav-item--login" href="#"> Войти</a></nav>
+						</div>
+						<div class="footer__col">
+							<div class="footer__title footer__title--dropdown js-footer-dropdown">Обратная связь</div>
+							<nav class="footer__nav footer__nav--mobile-folded"><a class="footer__nav-item" href="#">Адреса магазинов</a><a class="footer__nav-item" href="#">Вопросы/ответы</a><a class="footer__nav-item" href="#">Отзывы</a><a class="footer__nav-item" href="#">Доставка</a><a class="footer__nav-item" href="#">Оплата</a><a class="footer__nav-item" href="#">Обмен/возврат</a><a class="footer__nav-item" href="#">Гарантии</a></nav>
+							<div class="footer__title footer__title--dropdown js-footer-dropdown">Рекомендуем</div>
+							<nav class="footer__nav footer__nav--mobile-folded"><a class="footer__nav-item" href="#">Блог</a></nav>
+						</div>
+						<div class="footer__col footer__col--mobile-flex">
+							<div class="footer__col-box">
+								<div class="footer__title">Задайте ваш вопрос</div>
+								<nav class="footer__nav"><a class="footer__nav-item footer__nav-item--icon" href="#">
+										<svg class="icon icon-phone">
+											<use xlink:href="img/svg/sprite.svg#phone"></use>
+										</svg>WhatsApp</a><a class="footer__nav-item footer__nav-item--icon" href="#">
+										<svg class="icon icon-mail">
+											<use xlink:href="img/svg/sprite.svg#mail"></use>
+										</svg>Электронная почта</a><a class="footer__nav-item footer__nav-item--icon" href="#">
+										<svg class="icon icon-telegram">
+											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+										</svg>Telegram</a></nav>
+							</div>
+							<div class="footer__col-box">
+								<div class="footer__title">По телефону</div>
+								<nav class="footer__nav"><a class="footer__nav-item footer__nav-item--icon" href="#">
+										<svg class="icon icon-phone">
+											<use xlink:href="img/svg/sprite.svg#phone"></use>
+										</svg>8 800 800 800</a><a class="footer__nav-item footer__nav-item--icon" href="#">
+										<svg class="icon icon-point">
+											<use xlink:href="img/svg/sprite.svg#point"></use>
+										</svg>Адреса магазинов</a></nav>
+							</div>
+						</div>
+						<div class="footer__col footer__col--mobile-flex">
+							<div class="footer__col-box">
+								<div class="footer__title">Мы в соцсетях</div>
+								<div class="footer__socials"><a class="footer__social-item" href="#">
+										<svg class="icon icon-instagram">
+											<use xlink:href="img/svg/sprite.svg#instagram"></use>
+										</svg></a><a class="footer__social-item" href="#">
+										<svg class="icon icon-vk">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg></a><a class="footer__social-item" href="#">
+										<svg class="icon icon-telegram">
+											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+										</svg></a></div>
+							</div>
+							<div class="footer__col-box footer__col-box--payments">
+								<div class="footer__title">Принимаем к оплате</div>
+								<picture>
+									<source data-srcset="img/footer-payments.webp" type="image/webp"/><img class="lazyload" data-src="img/footer-payments.png" alt="image" width="200" height="32"/>
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="footer__copyright">© EGO BOTTEGO, 2021. Все права защищены. Информация, размещённая на данной странице, не является публичной офертой</div>
+						<div class="footer__developers">Разработка сайта — <a href="#">WEBELEMENT</a></div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="mobile-menu">
+			<div class="mobile-menu__close-cross js-close-mobile-menu">
+				<svg class="icon icon-close">
+					<use xlink:href="img/svg/sprite.svg#close"></use>
+				</svg>
+			</div>
+			<div class="mobile-menu__top">
+				<div class="mobile-menu__back js-mob-back">Назад</div>
+			</div>
+			<div class="mobile-menu__middle">
+				<nav class="mobile-menu__nav-middle">
+					<div class="mobile-menu__nav-middle-item js-open-dropdown">
+						<div class="mobile-menu__nav-cat mobile-menu__nav-middle-item-cat">Муранское стекло</div>
+						<div class="mobile-menu__nav-dropdown">
+							<div class="mobile-menu__nav-cat">Муранское стекло</div>
+							<div class="mobile-menu__nav-filter">
+								<div class="mobile-menu__nav-filter-type js-filter-dropdown">По типу изделия</div>
+								<div class="mobile-menu__nav-filter-dropdown js-filter-dropdown-box">
+									<div class="mobile-menu__nav-filter-subcat">Браслеты</div>
+									<div class="mobile-menu__nav-filter-subcat">Кольца</div>
+									<div class="mobile-menu__nav-filter-subcat">Серьги</div>
+									<div class="mobile-menu__nav-filter-subcat">Колье</div>
+									<div class="mobile-menu__nav-filter-subcat">Часы</div>
+									<div class="mobile-menu__nav-filter-subcat">Подвески</div>
+									<div class="mobile-menu__nav-filter-subcat">Аксессуары</div>
+								</div>
+							</div>
+							<div class="mobile-menu__nav-filter">
+								<div class="mobile-menu__nav-filter-type js-filter-dropdown">Материал</div>
+								<div class="mobile-menu__nav-filter-dropdown js-filter-dropdown-box">
+									<div class="mobile-menu__nav-filter-subcat">Браслеты</div>
+									<div class="mobile-menu__nav-filter-subcat">Кольца</div>
+									<div class="mobile-menu__nav-filter-subcat">Серьги</div>
+									<div class="mobile-menu__nav-filter-subcat">Колье</div>
+									<div class="mobile-menu__nav-filter-subcat">Часы</div>
+									<div class="mobile-menu__nav-filter-subcat">Подвески</div>
+									<div class="mobile-menu__nav-filter-subcat">Аксессуары</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mobile-menu__nav-middle-item js-open-dropdown">
+						<div class="mobile-menu__nav-cat mobile-menu__nav-middle-item-cat">Майорский жемчуг</div>
+						<div class="mobile-menu__nav-dropdown">
+							<div class="mobile-menu__nav-cat">Муранское стекло</div>
+							<div class="mobile-menu__nav-filter">
+								<div class="mobile-menu__nav-filter-type js-filter-dropdown">По типу изделия</div>
+								<div class="mobile-menu__nav-filter-dropdown js-filter-dropdown-box">
+									<div class="mobile-menu__nav-filter-subcat">Браслеты</div>
+									<div class="mobile-menu__nav-filter-subcat">Кольца</div>
+									<div class="mobile-menu__nav-filter-subcat">Серьги</div>
+									<div class="mobile-menu__nav-filter-subcat">Колье</div>
+									<div class="mobile-menu__nav-filter-subcat">Часы</div>
+									<div class="mobile-menu__nav-filter-subcat">Подвески</div>
+									<div class="mobile-menu__nav-filter-subcat">Аксессуары</div>
+								</div>
+							</div>
+							<div class="mobile-menu__nav-filter">
+								<div class="mobile-menu__nav-filter-type js-filter-dropdown">Материал</div>
+								<div class="mobile-menu__nav-filter-dropdown js-filter-dropdown-box">
+									<div class="mobile-menu__nav-filter-subcat">Браслеты</div>
+									<div class="mobile-menu__nav-filter-subcat">Кольца</div>
+									<div class="mobile-menu__nav-filter-subcat">Серьги</div>
+									<div class="mobile-menu__nav-filter-subcat">Колье</div>
+									<div class="mobile-menu__nav-filter-subcat">Часы</div>
+									<div class="mobile-menu__nav-filter-subcat">Подвески</div>
+									<div class="mobile-menu__nav-filter-subcat">Аксессуары</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mobile-menu__nav-middle-item js-open-dropdown">
+						<div class="mobile-menu__nav-cat mobile-menu__nav-middle-item-cat">Украшения из керамики</div>
+						<div class="mobile-menu__nav-dropdown">
+							<div class="mobile-menu__nav-cat">Муранское стекло</div>
+							<div class="mobile-menu__nav-filter">
+								<div class="mobile-menu__nav-filter-type js-filter-dropdown">По типу изделия</div>
+								<div class="mobile-menu__nav-filter-dropdown js-filter-dropdown-box">
+									<div class="mobile-menu__nav-filter-subcat">Браслеты</div>
+									<div class="mobile-menu__nav-filter-subcat">Кольца</div>
+									<div class="mobile-menu__nav-filter-subcat">Серьги</div>
+									<div class="mobile-menu__nav-filter-subcat">Колье</div>
+									<div class="mobile-menu__nav-filter-subcat">Часы</div>
+									<div class="mobile-menu__nav-filter-subcat">Подвески</div>
+									<div class="mobile-menu__nav-filter-subcat">Аксессуары</div>
+								</div>
+							</div>
+							<div class="mobile-menu__nav-filter">
+								<div class="mobile-menu__nav-filter-type js-filter-dropdown">Материал</div>
+								<div class="mobile-menu__nav-filter-dropdown js-filter-dropdown-box">
+									<div class="mobile-menu__nav-filter-subcat">Браслеты</div>
+									<div class="mobile-menu__nav-filter-subcat">Кольца</div>
+									<div class="mobile-menu__nav-filter-subcat">Серьги</div>
+									<div class="mobile-menu__nav-filter-subcat">Колье</div>
+									<div class="mobile-menu__nav-filter-subcat">Часы</div>
+									<div class="mobile-menu__nav-filter-subcat">Подвески</div>
+									<div class="mobile-menu__nav-filter-subcat">Аксессуары</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mobile-menu__nav-middle-item js-open-dropdown">
+						<div class="mobile-menu__nav-cat mobile-menu__nav-middle-item-cat">Оригинальная оптика</div>
+						<div class="mobile-menu__nav-dropdown">
+							<div class="mobile-menu__nav-cat">Муранское стекло</div>
+							<div class="mobile-menu__nav-filter">
+								<div class="mobile-menu__nav-filter-type js-filter-dropdown">По типу изделия</div>
+								<div class="mobile-menu__nav-filter-dropdown js-filter-dropdown-box">
+									<div class="mobile-menu__nav-filter-subcat">Браслеты</div>
+									<div class="mobile-menu__nav-filter-subcat">Кольца</div>
+									<div class="mobile-menu__nav-filter-subcat">Серьги</div>
+									<div class="mobile-menu__nav-filter-subcat">Колье</div>
+									<div class="mobile-menu__nav-filter-subcat">Часы</div>
+									<div class="mobile-menu__nav-filter-subcat">Подвески</div>
+									<div class="mobile-menu__nav-filter-subcat">Аксессуары</div>
+								</div>
+							</div>
+							<div class="mobile-menu__nav-filter">
+								<div class="mobile-menu__nav-filter-type js-filter-dropdown">Материал</div>
+								<div class="mobile-menu__nav-filter-dropdown js-filter-dropdown-box">
+									<div class="mobile-menu__nav-filter-subcat">Браслеты</div>
+									<div class="mobile-menu__nav-filter-subcat">Кольца</div>
+									<div class="mobile-menu__nav-filter-subcat">Серьги</div>
+									<div class="mobile-menu__nav-filter-subcat">Колье</div>
+									<div class="mobile-menu__nav-filter-subcat">Часы</div>
+									<div class="mobile-menu__nav-filter-subcat">Подвески</div>
+									<div class="mobile-menu__nav-filter-subcat">Аксессуары</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<div class="mobile-menu__bottom">
+				<nav class="mobile-menu__nav-bottom"><a class="mobile-menu__nav-bottom-item" href="#">О компании</a><a class="mobile-menu__nav-bottom-item" href="#">Карьера у нас</a><a class="mobile-menu__nav-bottom-item" href="#">Техники изготовления</a><a class="mobile-menu__nav-bottom-item" href="#">Бонусная программа</a><a class="mobile-menu__nav-bottom-item" href="#">Подарочные сертификаты</a><a class="mobile-menu__nav-bottom-item" href="#">Адреса магазинов</a><a class="mobile-menu__nav-bottom-item" href="#">Вопросы/ответы</a><a class="mobile-menu__nav-bottom-item" href="#">Отзывы</a><a class="mobile-menu__nav-bottom-item" href="#">Доставка</a><a class="mobile-menu__nav-bottom-item" href="#">Оплата</a><a class="mobile-menu__nav-bottom-item" href="#">Обмен/возврат</a><a class="mobile-menu__nav-bottom-item" href="#">Гарантии</a><a class="mobile-menu__nav-bottom-item" href="#">Блог</a></nav>
+			</div>
+		</div>
+		<div class="modal modal--mobile-search" id="modal-mobile-search">
+			<div class="modal__close-cross js-close-modal">
+				<svg class="icon icon-close">
+					<use xlink:href="img/svg/sprite.svg#close"></use>
+				</svg>
+			</div>
+			<div class="modal__inner modal__inner--mobile">
+				<div class="modal__search-wrapper">
+					<input class="modal__search-input js-easy-autocomplete-modal" type="search" placeholder="Поиск">
+					<div class="modal__control-icon">
+						<svg class="icon icon-search">
+							<use xlink:href="img/svg/sprite.svg#search"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal modal--action-complete" id="modal-action-complete">
+			<div class="modal__inner modal__inner--desktop modal__inner--bg">
+				<div class="modal-bg">
+					<picture>
+						<source data-srcset="img/modal-bg.webp" type="image/webp"/><img class="lazyload" data-src="img/modal-bg.png" alt="image" width="100%" height="100%"/>
+					</picture>
+				</div>
+				<div class="modal__close-cross js-close-modal">
+					<svg class="icon icon-close">
+						<use xlink:href="img/svg/sprite.svg#close"></use>
+					</svg>
+				</div>
+				<div class="modal__box modal__box--centered">
+					<div class="modal__title">Спасибо!</div>
+					<div class="modal__subtitle">Ваше сообщение отправлено</div>
+					<div class="hr"></div>
+					<div class="modal__continue-shopping js-close-modal">Вернуться на сайт</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal modal--map" id="modal-map">
+			<div class="modal__inner modal__inner--desktop modal__inner--bg">
+				<div class="modal-bg">
+					<picture>
+						<source data-srcset="img/modal-bg.webp" type="image/webp"/><img class="lazyload" data-src="img/modal-bg.png" alt="image" width="100%" height="100%"/>
+					</picture>
+				</div>
+				<div class="modal__close-cross js-close-modal">
+					<svg class="icon icon-close">
+						<use xlink:href="img/svg/sprite.svg#close"></use>
+					</svg>
+				</div>
+				<div class="modal__box">
+					<div class="shops js-shops" data-json="data/shops-map.json">
+						<div class="shops__left">
+							<form>
+								<div class="shops__list"></div>
+							</form>
+						</div>
+						<div class="shops__right">
+							<div class="shops__map-container map-container" id="modal-map-container" data-json="data/shops-map.json"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/vendor.min.js"></script>
+		<script src="scripts/main.min.js"></script>
+	</body>
+</html>

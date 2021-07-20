@@ -1,0 +1,19 @@
+.modal.modal--product-arrival#modal-product-arrival
+
+    .modal__inner.modal__inner--desktop.modal__inner--bg
+        .modal-bg
+            +picture('modal-bg', 'png', '100%', '100%')
+        .modal__close-cross.js-close-modal
+            +icon('close')
+        .modal__box
+            .modal__title Узнать о поступлении
+            form
+                +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text', 'modal-name', 'modal-name', 'Имя', true, '', 'Имя')
+                +form-group-no-lb(false, 'form-group--custom-text', 'email', 'custom-input-text', 'modal-mail', 'modal-mail', 'E-mail', true, '', 'E-mail')
+                +form-group-no-lb(false, 'form-group--custom-text form-group--last', 'tel', 'custom-input-text', 'modal-tel', 'modal-tel', 'телефон', true, '', 'телефон')
+                +form-group(false, 'product-filter__form-group form-group--checkbox js-checkbox', 'checkbox', 'custom-checkbox', 'form-group-checkbox', 'modal-checkbox', 'Подписаться на новости', false, 'custom-checkbox__label custom-checkbox__label-b')
+                .form-agreement-text Нажимая на кнопку, я соглашаюсь на #[a(href="#") обработку моих персональных данных] и ознакомлен(а) с условиями #[a(href="#") политики конфиденциальности]
+                button(type="submit").subscribe-gift__btn.common-btn
+                    span Отправить
+                    +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+

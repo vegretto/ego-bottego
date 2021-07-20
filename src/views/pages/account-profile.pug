@@ -1,0 +1,49 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--account-profile
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    a(href="#").breadcrumbs__item Главная
+                    .breadcrumbs__item Личный кабинет
+        .top-block.top-block--lg
+            .container
+                h1.common-title-h1.title-left Личный кабинет
+        .container
+            .main-wrapper__inner
+                aside.sidebar
+                    include ../components/sidebar-profile-navblock
+                main.main-content.main-content--account-profile
+                    .row
+                        .col-6
+                            +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'account-name', 'account-name', '', true, '', 'Имя')
+                            +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'account-surname', 'account-surname', '', true, '', 'Фамилия')
+                            +form-group-no-lb(false, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'account-second-name', 'account-second-name', '', true, '', 'Отчество')
+                        .col-6
+                            +form-group-no-lb(false, 'form-group--custom-text', 'tel', 'custom-input-text lowercase', 'account-phone', 'account-phone', '', true, '', 'Номер телефона')
+                            +form-group-no-lb(true, 'form-group--custom-text', 'text', 'custom-input-text lowercase', 'account-birth-date', 'account-birth-date', '', true, '', 'Дата рождения')
+                            .form-group.form-group--custom-text
+                                input.checkout__search-input.custom-input-text.lowercase.js-city-autocomplete(type="search" placeholder="Город")
+                                .error-message Это поле обязательно для заполнения
+                    button(type="submit").account-btn.common-btn
+                        span Сохранить измения
+                        +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                    .hr
+                    .account-subtitle Сменить пароль
+                    .row
+                        .col-6
+                            +form-group-no-lb(false, 'form-group--custom-text', 'password', 'custom-input-text lowercase', 'account-pass', 'account-pass', '', true, '', 'Пароль')
+                            +form-group-no-lb(false, 'form-group--custom-text', 'password', 'custom-input-text lowercase', 'account-repeat-pass', 'account-repeat-pass', '', true, '', 'Введите пароль еще раз')
+                    button(type="submit").account-btn.common-btn
+                        span Сохранить измения
+                        +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+
+
+block footer
+    include ../components/footer
+block append modals
+

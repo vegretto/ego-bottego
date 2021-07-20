@@ -1,0 +1,81 @@
+.gift-card {
+  margin-bottom: 100px;
+  @media (max-width: 991px) {
+    margin-bottom: 45px;
+  }
+  &__title {
+    text-align: left;
+    margin-bottom: 15px;
+    @media (max-width: 600px) {
+      margin-bottom: 7px;
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    position: relative;
+    @media (max-width: 991px) {
+      order: 1;
+    }
+  }
+  &__right {
+    @media (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+  }
+  &__text {
+    font-family: "CormorantGaramond", serif;
+    font-size: 20px;
+    margin-bottom: 40px;
+    @media (max-width: 600px) {
+      padding: 10px;
+      line-height: 1;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  &__img {
+    padding: 15px;
+    border: 1px solid #DDCCA6;
+    border-radius: 3px;
+    @media (max-width: 600px) {
+      padding: 10px;
+    }
+    img {
+      object-fit: cover;
+      @media (max-width: 768px) {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: -50px;
+    @media (max-width: 991px) {
+      top: -30px;
+      width: 570px;
+      left: -50px;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__left {
+    flex-grow: 1;
+    margin-right: 20px;
+    padding-left: 90px;
+    @media (max-width: 991px) {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

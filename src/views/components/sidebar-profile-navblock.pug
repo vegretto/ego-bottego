@@ -1,0 +1,21 @@
+.sidebar-navblock
+    .sidebar-navblock__bg
+        +picture('sidebar-bg', 'png', '270px', '100%')
+    .sidebar-navblock__box
+        a(href="#").sidebar-navblock__navitem.current
+            +icon('profile')
+            span Мой профиль
+        a(href="#").sidebar-navblock__navitem
+            +icon('orders')
+            span Мои заказы
+        a(href="#").sidebar-navblock__navitem
+            +icon('envelope')
+            span Подписка на новости
+        a(href="#").sidebar-navblock__navitem
+            +icon('gift')
+            span Мои бонусы
+        .sidebar-navblock__hr
+        a(href="#").sidebar-navblock__navitem.sidebar-navblock__navitem--mobile-fixed
+            +icon('logout')
+            span Выход
+

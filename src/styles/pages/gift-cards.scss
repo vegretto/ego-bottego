@@ -1,0 +1,38 @@
+.gift-cards {
+  &__title {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    padding: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 auto 40px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s ease-in-out;
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+    &.choosen {
+      border-color: $gold;
+      transition: 0.2s ease-in-out;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__item-title {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'CormorantGaramond', serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+}

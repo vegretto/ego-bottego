@@ -1,0 +1,149 @@
+header.header
+    .header__top
+        .container
+            .header__top-inner
+                .header__controls
+                    .header__control.header__mob-menu.js-open-mob-menu
+                        +icon('mobile-menu')
+                    .header__control.header__search.js-header-search
+                        .header__control-icon
+                            +icon('search')
+                        span Поиск
+                        input.header__search-input.js-easy-autocomplete(type="search" placeholder="Поиск")
+                    a(href="#").header__control.header__shops
+                        .header__control-icon
+                            +icon('placemark')
+                        span Магазины (#[span 15])
+                a(href="/").header__logo
+                    +pictureSVG('logo', 'svg', '153', '105')
+                    .header__logo-descriptor Украшения и аксессуары из италии
+                .header__controls.header__controls--end
+                    a(href="#").header__control.header__login
+                        .header__control-icon
+                            +icon('login')
+                        span Войти
+                    a(href="#").header__control.header__favourite
+                        .header__control-icon
+                            +icon('like')
+                        .header__control-num 25
+                    a(href="#").header__control.header__cart
+                        .header__control-icon
+                            +icon('cart')
+                        .header__control-num 4
+    .header__bottom
+        .container
+            .header__bottom-inner
+                nav.header__nav
+                    a(href='#' data-dropdown-id='header-dropdown-1').header__nav-item.js-menu-dropdown Муранское стекло
+                    a(href='#' data-dropdown-id='header-dropdown-2').header__nav-item.js-menu-dropdown Майорский жемчуг
+                    a(href='#' data-dropdown-id='header-dropdown-3').header__nav-item.js-menu-dropdown Украшения из керамики
+                    a(href='#' data-dropdown-id='header-dropdown-4').header__nav-item.js-menu-dropdown Оригинальная оптика
+        .header__dropdown#header-dropdown-1
+            .container
+                .header__dropdown-inner
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                            a(href='#').header__dropdown-item Серьги
+                            a(href='#').header__dropdown-item Колье
+                            a(href='#').header__dropdown-item Часы
+                            a(href='#').header__dropdown-item Подвески
+                            a(href='#').header__dropdown-item Аксессуары
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                            a(href='#').header__dropdown-item Серьги
+                            a(href='#').header__dropdown-item Колье
+                    .header__dropdown-img
+                        +picture('dropdown1', 'png', '409', '248')
+        .header__dropdown#header-dropdown-2
+            .container
+                .header__dropdown-inner
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                            a(href='#').header__dropdown-item Серьги
+
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                            a(href='#').header__dropdown-item Серьги
+
+                    .header__dropdown-img
+                        +picture('dropdown1', 'png', '409', '248')
+        .header__dropdown#header-dropdown-3
+            .container
+                .header__dropdown-inner
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                            a(href='#').header__dropdown-item Серьги
+                            a(href='#').header__dropdown-item Колье
+                            a(href='#').header__dropdown-item Часы
+                            a(href='#').header__dropdown-item Подвески
+                            a(href='#').header__dropdown-item Аксессуары
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                            a(href='#').header__dropdown-item Серьги
+                            a(href='#').header__dropdown-item Колье
+                            a(href='#').header__dropdown-item Часы
+                            a(href='#').header__dropdown-item Подвески
+                            a(href='#').header__dropdown-item Аксессуары
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                    .header__dropdown-img
+                        +picture('dropdown1', 'png', '409', '248')
+        .header__dropdown#header-dropdown-4
+            .container
+                .header__dropdown-inner
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                            a(href='#').header__dropdown-item Серьги
+                            a(href='#').header__dropdown-item Колье
+                            a(href='#').header__dropdown-item Часы
+                            a(href='#').header__dropdown-item Подвески
+                            a(href='#').header__dropdown-item Аксессуары
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                    .header__dropdown-col
+                        .header__dropdown-subtitle По типу изделия
+                        .header__dropdown-items
+                            a(href='#').header__dropdown-item Браслеты
+                            a(href='#').header__dropdown-item Кольца
+                            a(href='#').header__dropdown-item Серьги
+                            a(href='#').header__dropdown-item Колье
+                    .header__dropdown-img
+                        +picture('dropdown1', 'png', '409', '248')
+

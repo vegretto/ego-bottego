@@ -1,0 +1,26 @@
+.modal.modal--sizes#modal-sizes
+    .modal__inner.modal__inner--desktop.modal__inner--bg
+        .modal-bg
+            +picture('modal-bg', 'png', '100%', '100%')
+        .modal__close-cross.js-close-modal
+            +icon('close')
+        form
+            .modal__box.modal__box--centered
+                    .modal__title Выберите размер
+                    .choose-size
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[0]', '15', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[1]', '16', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[2]', '16.5', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group out-of-stock js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[3]', '17', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[4]', '18', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[5]', '19', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[6]', '20', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[7]', '21', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group out-of-stock js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[8]', '22', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[9]', '23', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[10]', '24', true, 'choose-size__label')
+                        +form-group-size(false, 'choose-size__form-group js-radio', 'radio', 'custom-radio choose-size-radio', 'choose-size-radio', 'choose-size-radio[11]', '25', true, 'choose-size__label')
+                    .hr
+                    .modal__continue-shopping.js-close-modal Продолжить покупки
+
+

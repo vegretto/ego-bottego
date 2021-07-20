@@ -1,0 +1,132 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--catalog
+        section.main-slider.swiper-container.js-main-slider
+            .slider-button.slider-button--prev
+                +icon('arrow')
+            .slider-button.slider-button--next
+                +icon('arrow')
+            .slider-pagination
+            .swiper-wrapper
+                .main-slider__slide.swiper-slide
+                    .main-slider__img
+                        +pictureAdaptive('main-slider', 'png', '100%', '525')
+                    .main-slider__content
+                        .main-slider__subtitle Авторские украшения из самого сердца Италии
+                        .main-slider__title Про любовь к себе
+                        a(href="#").main-slider__btn.common-btn.common-btn--white
+                            span Перейти в каталог
+                            +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                .main-slider__slide.swiper-slide
+                    .main-slider__img
+                        +pictureAdaptive('main-slider', 'png', '100%', '525')
+                    .main-slider__content
+                        .main-slider__subtitle Авторские украшения из самого сердца Италии
+                        .main-slider__title Про любовь к себе
+                        .main-slider__btn.common-btn.common-btn--white
+                            span Перейти в каталог
+                            +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                .main-slider__slide.swiper-slide
+                    .main-slider__img
+                        +pictureAdaptive('main-slider', 'png', '100%', '525')
+                    .main-slider__content
+                        .main-slider__subtitle Авторские украшения из самого сердца Италии
+                        .main-slider__title Про любовь к себе
+                        .main-slider__btn.common-btn.common-btn--white
+                            span Перейти в каталог
+                            +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+
+        section.categories-block
+            .container
+                .categories-block__items
+                    a(href="#").categories-block__item
+                        .splash-bg
+                            +picture('main-cats-bg1', 'png', '410', '475')
+                        .categories-block__title Муранское стекло
+                        .categories-block__img
+                            +pictureAdaptive('main-cats1', 'png', '295', '370')
+                        .categories-block__hidden-btn
+                            .main-slider__btn.common-btn
+                                span Перейти в каталог
+                                +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                    a(href="#").categories-block__item
+                        .splash-bg
+                            +picture('main-cats-bg2', 'png', '410', '475')
+                        .categories-block__title Майорский жемчуг
+                        .categories-block__img
+                            +pictureAdaptive('main-cats2', 'png', '295', '370')
+                        .categories-block__hidden-btn
+                            .main-slider__btn.common-btn
+                                span Перейти в каталог
+                                +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                    a(href="#").categories-block__item
+                        .splash-bg
+                            +picture('main-cats-bg1', 'png', '410', '475')
+                        .categories-block__title Украшения из керамики
+                        .categories-block__img
+                            +pictureAdaptive('main-cats3', 'png', '295', '370')
+                        .categories-block__hidden-btn
+                            .main-slider__btn.common-btn
+                                span Перейти в каталог
+                                +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                    a(href="#").categories-block__item
+                        .splash-bg
+                            +picture('main-cats-bg2', 'png', '410', '475')
+                        .categories-block__title Оригинальная оптика
+                        .categories-block__img
+                            +pictureAdaptive('main-cats4', 'png', '295', '370')
+                        .categories-block__hidden-btn
+                            .main-slider__btn.common-btn
+                                span Перейти в каталог
+                                +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+        section.optics-block.optics-block--mt
+            .container
+                .optics-block__inner
+                    a(href="#").optics-block__left
+                        .optics-block__img.optics-block__img-lg
+                            +pictureAdaptive('optics-lg', 'png', '273', '381')
+                        .optics-block__img.optics-block__img-sm
+                            +picture('optics-sm', 'png', '187', '244')
+                        .optics-block__btn.common-btn
+                            span Перейти в каталог
+                            +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                    .optics-block__right
+                        h2.optics-block__title.common-title-h2 Оригинальная оптика
+                        .optics-block__items
+                            a(href="#").optics-block__item
+                                +picture('optics-item1', 'png', 'auto', 'auto')
+                            a(href="#").optics-block__item
+                                +picture('optics-item2', 'png', 'auto', 'auto')
+                            a(href="#").optics-block__item
+                                +picture('optics-item3', 'png', 'auto', 'auto')
+                            a(href="#").optics-block__item
+                                +picture('optics-item4', 'png', 'auto', 'auto')
+                            a(href="#").optics-block__item
+                                +picture('optics-item3', 'png', 'auto', 'auto')
+                            a(href="#").optics-block__item
+                                +picture('optics-item2', 'png', 'auto', 'auto')
+        section.gift-card
+            .container
+                .gift-card__inner
+                    .gift-card__left
+                        .gift-card__bg
+                            +picture('gift-card-bg', 'png', '568', '148')
+                        h2.gift-card__title.common-title-h2 Подарочная карта EGO BOTTEGO
+                        .gift-card__text Подари возможность выбора!
+                        a(href="#").advantages__btn.common-btn
+                            span Подробнее
+                            +pictureSVGAdaptive('/svg/common-btn', '237', '78')
+                    .gift-card__right
+                        .gift-card__img
+                            +pictureAdaptive('gift-card', 'png', '550', '329')
+        section.seo-text
+            .container
+                .seo-text__title Украшения из муранского стекла из Италии, в России с 2009 года.
+                .seo-text__text На протяжении многих веков стекло с острова Мурано вызывает восхищение человечества. Муранское стекло дошло до современной эпохи в неизменном виде и по сей день остается культовым материалом. Муранское стекло, которое Bottega Murano использует в своих украшениях, производится венецианскими мастерами вручную, с соблюдением старинных технологий.
+
+block footer
+    include ../components/footer

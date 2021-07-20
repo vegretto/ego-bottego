@@ -1,0 +1,611 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .main-wrapper.main-wrapper--product-card
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    a(href="#").breadcrumbs__item Главная
+                    a(href="#").breadcrumbs__item Каталог
+                    a(href="#").breadcrumbs__item Муранское стекло
+                    a(href="#").breadcrumbs__item Кольца
+                    .breadcrumbs__item.js-open-modal(data-modal="modal--product-arrival") Кольцо AG 925 (0404R035L55)
+        .top-block
+            .container
+                a(href="#").top-block__back Назад
+        section.product-card
+            .product-card__top
+                .container
+                    .product-card__top-inner
+                        .product-card__gallery
+                            .product-card__thumb-slider.swiper-container.js-product-thumb-slider
+                                .swiper-wrapper
+                                    .product-card__thumb-slide.swiper-slide
+                                        +picture('product-card-thumb1', 'png', '100', '100')
+                                    .product-card__thumb-slide.swiper-slide
+                                        +picture('product-card-thumb2', 'png', '100', '100')
+                                    .product-card__thumb-slide.swiper-slide.product-card__thumb-slide--video
+                                        +picture('product-card-thumb3', 'png', '100', '100')
+                                    .product-card__thumb-slide.swiper-slide
+                                        +picture('product-card-thumb4', 'png', '100', '100')
+                                    .product-card__thumb-slide.swiper-slide
+                                        +picture('product-card-thumb5', 'png', '100', '100')
+                                    .product-card__thumb-slide.swiper-slide
+                                        +picture('product-card-thumb1', 'png', '100', '100')
+                                    .product-card__thumb-slide.swiper-slide
+                                        +picture('product-card-thumb2', 'png', '100', '100')
+                            .product-card__main-slider.swiper-container.js-product-main-slider
+                                .swiper-wrapper
+                                    .product-card__main-slide.swiper-slide
+                                        .product-card__labels
+                                            .product-card__label--hit Хит продаж
+                                        +pictureFancybox('product-card-main1', 'png', '600', '600')
+                                    .product-card__main-slide.swiper-slide
+                                        .product-card__labels
+                                            .product-card__label--hit Хит продаж
+                                        +pictureFancybox('product-card-main1', 'png', '600', '600')
+                                    .product-card__main-slide.swiper-slide.product-card__main-slide--video
+                                        .product-card__labels
+                                            .product-card__label--hit Хит продаж
+                                        +videoFancybox('product-card1', 'mp4', 'product-card-main1', 'png',  '640', '360', '600', '600')
+                                    .product-card__main-slide.swiper-slide
+                                        .product-card__labels
+                                            .product-card__label--hit Хит продаж
+                                        +pictureFancybox('product-card-main1', 'png', '600', '600')
+                                    .product-card__main-slide.swiper-slide
+                                        .product-card__labels
+                                            .product-card__label--hit Хит продаж
+                                        +pictureFancybox('product-card-main1', 'png', '600', '600')
+                                    .product-card__main-slide.swiper-slide
+                                        .product-card__labels
+                                            .product-card__label--hit Хит продаж
+                                        +pictureFancybox('product-card-main1', 'png', '600', '600')
+                                    .product-card__main-slide.swiper-slide
+                                        .product-card__labels
+                                            .product-card__label--hit Хит продаж
+                                        +pictureFancybox('product-card-main1', 'png', '600', '600')
+                        .product-card__info
+                            .product-card__in-stock В наличии
+                            h1.product-card__title.common-title-h1 Кольцо коллекции Vetrofusione Кольцо коллекции Vetrofusione
+                            .product-card__price-box
+                                .product-card__price 4 000 ₽
+                                .product-card__price-old 5340 ₽
+                                    .product-card__icon
+                                        +icon('info')
+                                        .product-card__icon-popup Акция “Скидка на кольца”
+                                .product-card__bonus 50 бонусов за покупку
+                            .product-card__details
+                                .product-card__details-top
+                                    .btn.common-btn-simple.js-open-modal(data-modal="modal-sizes") Выбрать размер
+                                    .form-group.form-group--select
+                                        .product-card__package.custom-select.js-custom-select.js-open-popup
+                                            span.custom-select__value Выбрать упаковку
+                                            .custom-select-options.js-popup
+                                                .custom-select-option Картон
+                                                .custom-select-option Пластик
+                                            select#product-card-package
+                                                option Картон
+                                                option Пластик
+                                .product-card__details-middle
+                                    .product-card__details-title Детали
+                                    .product-card__details-article Артикул  1082 80
+                                .product-card__details-bottom
+                                    .product-card__details-row
+                                        .product-card__details-title Подробности
+                                    .product-card__details-row
+                                        .product-card__details-subtitle Страна дизайна
+                                        .product-card__details-text Италия
+                                    .product-card__details-row
+                                        .product-card__details-subtitle Состав
+                                        .product-card__details-text Муранское стекло
+                                    .product-card__details-row
+                                        .product-card__details-subtitle Упаковка
+                                        .product-card__details-text Еврослот
+                                    .product-card__details-row
+                                        .product-card__details-subtitle Цвет
+                                        .product-card__details-text Зеленый
+                            .product-card__controls
+                                .product-card__control-item.product-card__control-item--arrow.js-open-modal(data-modal="modal-sizes-table")
+                                    span Таблица размеров и обмеры
+                                .product-card__control-item.product-card__control-item--flex
+                                    .product-card__control-inner.product-card__to-favourite.js-open-modal(data-modal="modal-action-complete")
+                                        .product-card__control-icon
+                                            +icon('like')
+                                        span В избранное
+                                    a.product-card__control-inner.product-card__to-cart.js-to-cart.js-open-modal(data-modal="modal-product-added")
+                                        .product-card__control-icon
+                                            +icon('cart')
+                                        span В корзину
+            .product-card__bottom
+                .container
+                    .product-card__info-tabs
+                        .product-card__info-tabs-toggles
+                            .product-card__info-tabs-toggle-item.js-tab-toggle(data-tabs="description") Описание
+                            .product-card__info-tabs-toggle-item.js-tab-toggle.active(data-tabs="testimonials") Отзывы
+                            .product-card__info-tabs-toggle-item.js-tab-toggle(data-tabs="certificates") Сертификаты
+                            .product-card__info-tabs-toggle-item.js-tab-toggle(data-tabs="warranty") Гарантия и возврат
+                            .product-card__info-tabs-toggle-item.js-tab-toggle(data-tabs="delivery") Доставка и оплата
+                        .product-card__info-tabs-content
+                            .product-card__info-tabs-tab.js-tab#description
+                                p Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Кольцо с металлическим креплением для каучуковых и бисерных нитей.  Кольцо с металлическим креплением для каучуковых и бисерных нитей.
+                            .product-card__info-tabs-tab.js-tab.active#testimonials
+                                .testimonials-slider.swiper-container.js-testimonials-slider
+                                    .slider-button.slider-button--prev
+                                        +icon('arrow')
+                                    .slider-button.slider-button--next
+                                        +icon('arrow')
+                                    .swiper-wrapper
+                                        .testimonials-slider__slide.swiper-slide
+                                            .testimonials-slider__user-testimonial
+                                                .testimonials-slider__user-avatar
+                                                    span ЕИ
+                                                .testimonials-slider__user-box
+                                                    .testimonials-slider__user-name Елена Иванова
+                                                    .testimonials-slider__user-rating
+                                                        .stars.js-stars(data-rating="3.5")
+                                                            .stars__icons
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                    .testimonials-slider__user-good
+                                                        | Товар:
+                                                        a(href="#") «Кольцо коллекции Vetrofusione»
+                                                    .testimonials-slider__user-shop
+                                                        | Магазин:
+                                                        span Пятигорск 2
+                                                    .testimonials-slider__user-text Хороший ассортимент, всегда можно найти уникальные изделия на любой вкус. Особенно впечатлила коллекция с керамикой. Девочки всегда помогут с выбором, находят индивидуальный подход к каждому. Не могу уйти из магазина не приобретя какую-нибудь красоту. Спасибо вам большое за профессиональное обслуживание. рекомендую посетить именно этот салон их сети и зарядится положительными эмоциями.
+                                                    .testimonials-slider__user-date 10 января 2021
+                                            .testimonials-slider__shop-reply
+                                                .testimonials-slider__shop-avatar
+                                                    +picture('testimonials-avatar', 'png', '50', '50')
+                                                .testimonials-slider__shop-reply-content
+                                                    .testimonials-slider__shop-reply-title Ответ магазина:
+                                                    .testimonials-slider__shop-reply-text Спасибо за ваш отзыв!
+                                        .testimonials-slider__slide.swiper-slide
+                                            .testimonials-slider__user-testimonial
+                                                .testimonials-slider__user-avatar
+                                                    span ЕИ
+                                                .testimonials-slider__user-box
+                                                    .testimonials-slider__user-name Елена Иванова
+                                                    .testimonials-slider__user-rating
+                                                        .stars.js-stars(data-rating="3.5")
+                                                            .stars__icons
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                    .testimonials-slider__user-good
+                                                        | Товар:
+                                                        a(href="#") «Кольцо коллекции Vetrofusione»
+                                                    .testimonials-slider__user-shop
+                                                        | Магазин:
+                                                        span Пятигорск 2
+                                                    .testimonials-slider__user-text Хороший ассортимент, всегда можно найти уникальные изделия на любой вкус. Особенно впечатлила коллекция с керамикой. Девочки всегда помогут с выбором, находят индивидуальный подход к каждому. Не могу уйти из магазина не приобретя какую-нибудь красоту. Спасибо вам большое за профессиональное обслуживание. рекомендую посетить именно этот салон их сети и зарядится положительными эмоциями.
+                                                    .testimonials-slider__user-date 10 января 2021
+                                            .testimonials-slider__shop-reply
+                                                .testimonials-slider__shop-avatar
+                                                    +picture('testimonials-avatar', 'png', '50', '50')
+                                                .testimonials-slider__shop-reply-content
+                                                    .testimonials-slider__shop-reply-title Ответ магазина:
+                                                    .testimonials-slider__shop-reply-text Спасибо за ваш отзыв!
+                                        .testimonials-slider__slide.swiper-slide
+                                            .testimonials-slider__user-testimonial
+                                                .testimonials-slider__user-avatar
+                                                    span ЕИ
+                                                .testimonials-slider__user-box
+                                                    .testimonials-slider__user-name Елена Иванова
+                                                    .testimonials-slider__user-rating
+                                                        .stars.js-stars(data-rating="3.5")
+                                                            .stars__icons
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                                .star
+                                                                    span.star__icon.star__icon--active
+                                                                    span.star__icon.star__icon--default
+                                                    .testimonials-slider__user-good
+                                                        | Товар:
+                                                        a(href="#") «Кольцо коллекции Vetrofusione»
+                                                    .testimonials-slider__user-shop
+                                                        | Магазин:
+                                                        span Пятигорск 2
+                                                    .testimonials-slider__user-text Хороший ассортимент, всегда можно найти уникальные изделия на любой вкус. Особенно впечатлила коллекция с керамикой. Девочки всегда помогут с выбором, находят индивидуальный подход к каждому. Не могу уйти из магазина не приобретя какую-нибудь красоту. Спасибо вам большое за профессиональное обслуживание. рекомендую посетить именно этот салон их сети и зарядится положительными эмоциями.
+                                                    .testimonials-slider__user-date 10 января 2021
+                                            .testimonials-slider__shop-reply
+                                                .testimonials-slider__shop-avatar
+                                                    +picture('testimonials-avatar', 'png', '50', '50')
+                                                .testimonials-slider__shop-reply-content
+                                                    .testimonials-slider__shop-reply-title Ответ магазина:
+                                                    .testimonials-slider__shop-reply-text Спасибо за ваш отзыв!
+                                .add-testimonial
+                                    .add-testimonial__box
+                                        .add-testimonial__icon
+                                            +icon('testimonial')
+                                        .add-testimonial__text.js-open-modal(data-modal="modal-testimonial") Оставить отзыв
+                            .product-card__info-tabs-tab.js-tab#certificates
+                                p Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Кольцо с металлическим креплением для каучуковых и бисерных нитей.  Кольцо с металлическим креплением для каучуковых и бисерных нитей.
+                            .product-card__info-tabs-tab.js-tab#warranty
+                                p Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Кольцо с металлическим креплением для каучуковых и бисерных нитей.  Кольцо с металлическим креплением для каучуковых и бисерных нитей.
+                                p Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Кольцо с металлическим креплением для каучуковых и бисерных нитей.  Кольцо с металлическим креплением для каучуковых и бисерных нитей.
+                            .product-card__info-tabs-tab.js-tab#delivery
+                                p Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Кольцо с металлическим креплением для каучуковых и бисерных нитей.  Кольцо с металлическим креплением для каучуковых и бисерных нитей.
+                                p Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями.  Кольцо с металлическим креплением для каучуковых и бисерных нитей. Кольцо с металлическим креплением для каучуковых и бисерных нитей. Многослойное муранское стекло с сусальным золотом, мурринами и разноцветными вкраплениями. Кольцо с металлическим креплением для каучуковых и бисерных нитей.  Кольцо с металлическим креплением для каучуковых и бисерных нитей.
+        section.product-slider-block
+            .container
+                .product-slider-block__inner
+                    h2.product-slider-block__title.common-title-h2 Вам может понравиться
+                    .product-slider.swiper-container.js-you-will-like-slider
+                        .slider-button.slider-button--prev
+                            +icon('arrow')
+                        .slider-button.slider-button--next
+                            +icon('arrow')
+                        .swiper-wrapper
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item1', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item2', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item3', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item4', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item1', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item2', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item3', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item4', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+        section.product-slider-block
+            .container
+                .product-slider-block__inner
+                    h2.product-slider-block__title.common-title-h2 С этим изделием заказывают
+                    .product-slider.swiper-container.js-buy-also-slider
+                        .slider-button.slider-button--prev
+                            +icon('arrow')
+                        .slider-button.slider-button--next
+                            +icon('arrow')
+                        .swiper-wrapper
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item1', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item2', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item3', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item4', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item1', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item2', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item3', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+                            .product-item.swiper-slide
+                                .product-item__img
+                                    .product-item__favourite.favourite.js-toggle-active
+                                        +icon('heart')
+                                    +pictureAdaptive('product-item4', 'png', '285', '250')
+                                .product-item__bottom
+                                    .product-item__collection Коллекция Taormina
+                                    .product-item__name Кольцо-Люме регулируемое
+                                    .product-item__article Артикул: CC FO064
+                                    .product-item__price-box
+                                        .product-item__price 16 000 ₽
+                                        .product-item__old-price 19 000 ₽
+                                    .product-item__to-cart
+                                        +icon('cart')
+        section.product-items
+            .container
+                h2.product-items__title.common-title-h2 Просматривали ранее
+                .product-items__inner
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item1', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item2', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item3', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+                    .product-item
+                        .product-item__img
+                            .product-item__favourite.favourite.js-toggle-active
+                                +icon('heart')
+                            .product-item__inner-slider.swiper-container.js-inner-slider
+                                .slider-pagination.slider-pagination--inner
+                                .swiper-wrapper
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                                    .product-item__inner-slide.swiper-slide
+                                        +pictureAdaptive('product-item4', 'png', '285', '250')
+                        .product-item__bottom
+                            .product-item__collection Коллекция Taormina
+                            .product-item__name Кольцо-Люме регулируемое
+                            .product-item__article Артикул: CC FO064
+                            .product-item__price-box
+                                .product-item__price 16 000 ₽
+                                .product-item__old-price 19 000 ₽
+                            .product-item__to-cart
+                                +icon('cart')
+block footer
+    include ../components/footer
+block append modals
+    include ../modals/modal-product-arrival
+    include ../modals/modal-product-added
+    include ../modals/modal-sizes
+    include ../modals/modal-testimonial
+    include ../modals/modal-sizes-table
