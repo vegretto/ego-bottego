@@ -39,7 +39,7 @@ function scriptsVendor() {
         'node_modules/imask/dist/imask.js',
         'src/scripts/vendor/jquery.fancybox.js',
         'src/scripts/vendor/datepicker.min.js',
-        'node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js',
+        //'node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js',
     ])
         .pipe(sourcemaps.init())
         .pipe(concat('vendor.min.js'))

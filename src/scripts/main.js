@@ -1,60 +1,6 @@
 $(document).ready(function () {
 
-    /* Header Search Input */
-    const eacOptions =
-        {
-            data: ["Колье белое с золотом", "Колье-галстук", "Колье Эстер", "Колье Кокетка", "Колье Pupa", "Колье белое с золотом1", "Колье-галстук2", "Колье Эстер3", "Колье Кокетка4", "Колье Pupa5"],
-            list: {
-                maxNumberOfElements: 15,
-            }
-        };
 
-    const eacCities =
-        {
-            data: ["Пятигорск", "Краснодар", "Ростов", "Ессентуки", "Нью-Йорк"],
-            list: {
-                maxNumberOfElements: 15,
-            }
-        };
-
-    let initEAC = (elem, data) => {
-        if (!elem.hasClass('eac-initialized')) {
-            elem.addClass('eac-initialized');
-            elem.easyAutocomplete(data);
-        }
-    }
-
-    initEAC($('.js-city-autocomplete'), eacCities);
-
-    if (screen.width > 991) {
-
-        $('.js-header-search').on('click', function () {
-            if (!$(this).hasClass('expanded')) {
-                const containerWidth = $(this).parents('.container').width();
-                $(this).addClass('expanded');
-                $(this).find('span').addClass('hidden');
-                const searchInput = $(this).find('.header__search-input');
-                searchInput.addClass('visible');
-                searchInput.css('width', '45px');
-                searchInput.animate({'width': containerWidth / 6});
-                initEAC($('.js-easy-autocomplete'), eacOptions);
-                const eacWrapper = $(this).find('.easy-autocomplete');
-                eacWrapper.css('width', '45px');
-                eacWrapper.animate({'width': containerWidth / 6});
-                searchInput.focus();
-            }
-        })
-    }
-    else {
-        $('.js-header-search').addClass('js-open-modal js-init-eac').attr('data-modal', 'modal-mobile-search')
-        $('.js-init-eac').on('click', function () {
-            setTimeout(() => {
-                initEAC($('.js-easy-autocomplete-modal'), eacOptions);
-            }, 402)
-
-        });
-    }
-    /* END Header Search Input */
 
     /* Menu Dropdown */
     $('.js-menu-dropdown').on('mouseover', function () {
@@ -110,7 +56,7 @@ $(document).ready(function () {
         })
     }
 
-    $('.js-open-modal').on('click', function (e) {
+    $(document).on('click', '.js-open-modal', function (e) {
         e.preventDefault();
         let modalToOpen = $(this).attr('data-modal');
         $(`#${modalToOpen}`).addClass('opened').fadeOut(1).fadeIn(400);
@@ -118,7 +64,15 @@ $(document).ready(function () {
         renderClickableBG(true, $(`#${modalToOpen}`), $(`#${modalToOpen}`))
     })
 
-    $('.js-close-modal').on('click', function () {
+    $(document).on('show', '.js-modal-custom', function (e) {
+        e.preventDefault();
+        let modalToOpen = $(this).attr('id');
+        $(`#${modalToOpen}`).addClass('opened').fadeOut(1).fadeIn(400);
+        $('body').addClass('modal-opened').css('padding-right', scrollWidth);
+        renderClickableBG(true, $(`#${modalToOpen}`), $(`#${modalToOpen}`))
+    })
+
+    $(document).on('click', '.js-close-modal', function () {
         let modalToClose = $(this).parents('.modal');
         modalToClose.removeClass('opened');
         $('body').removeClass('modal-opened').css('padding-right', 0);
@@ -151,7 +105,7 @@ $(document).ready(function () {
         $('.mobile-menu').removeClass('dd-opened');
     })
 
-    $('.js-filter-dropdown').on('click', function () {
+    $(document).on('click', '.js-filter-dropdown', function () {
         $(this).toggleClass('active');
         $(this).parent().find('.js-filter-dropdown-box').slideToggle('300');
     })
@@ -242,21 +196,30 @@ $(document).ready(function () {
         });
     })
 
-    $('.js-cart-slider').each(function () {
-        const cartSlider = new Swiper($(this)[0], {
-            lazy: true,
-            spaceBetween: 0,
-            navigation: {
-                nextEl: '.slider-button--next',
-                prevEl: '.slider-button--prev',
-            },
-            breakpoints: {
-                767: {
-                    spaceBetween: 15,
-                }
-            },
-        });
-    })
+    function cartSlider() {
+        $('.js-cart-slider').each(function () {
+            const cartSlider = new Swiper($(this)[0], {
+                lazy: true,
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: '.slider-button--next',
+                    prevEl: '.slider-button--prev',
+                },
+                breakpoints: {
+                    767: {
+                        spaceBetween: 15,
+                    }
+                },
+            });
+        })
+    }
+
+    cartSlider();
+
+    $(document).on('update-cart', function(){
+        cartSlider();
+    });
+
 
     const productCardThumbSlider = new Swiper('.js-product-thumb-slider', {
         lazy: true,
@@ -353,8 +316,8 @@ $(document).ready(function () {
         filterItem.html(`<span>${elementText}</span>
                 <div class="product-filter__item-bg product-filter__item-bg--red">
                     <picture>
-                        <source data-srcset="img/prod-filter-bg-red.webp" type="image/webp" srcset="img/prod-filter-bg-red.webp">
-                        <img class=" lazyloaded" data-src="img/prod-filter-bg-red.png" alt="image" width="107" height="31" src="img/prod-filter-bg-red.png">
+                        <source data-srcset="/img/prod-filter-bg-red.webp" type="image/webp" srcset="/img/prod-filter-bg-red.webp">
+                        <img class=" lazyloaded" data-src="/img/prod-filter-bg-red.png" alt="image" width="107" height="31" src="/img/prod-filter-bg-red.png">
                     </picture>
                 </div>`)
         filterItem.on('click', function () {
@@ -372,33 +335,35 @@ $(document).ready(function () {
         $('.clickable-bg').remove();
     }
 
-    $('.js-radio').on('click',function () {
+    $(document).on('click', '.js-radio', function () {
         $(this).parent().find('.js-radio').removeClass('choosen');
         $(this).addClass('choosen');
-        $(this).find('.custom-radio').prop('checked', true);
+        $(this).find('.custom-radio').prop('checked', true).change();
     });
 
-    $('.js-filter-radio').on('click',function () {
+    $(document).on('click', '.js-filter-radio', function () {
         $(this).parent().find('.js-filter-radio').removeClass('choosen');
         $(this).addClass('choosen');
         $(this).find('.custom-radio').prop('checked', true);
         if (screen.width > 600) {
-            $(this).parents('.product-filter__items-box').find('.js-filter-item').remove();
-            addFilter($(this).find('.custom-radio__label').text(), $(this).parents('.product-filter__items-box'));
+            //$(this).parents('.product-filter__items-box').find('.js-filter-item').remove();
+            //addFilter($(this).find('.custom-radio__label').text(), $(this).parents('.product-filter__items-box'));
             closePopup($(this).parents('.js-popup'));
         }
         else {
             $('.mobile-filters__chosen-filters').find('.js-filter-item.product-filter__item--type').remove();
-            addFilter($(this).find('.custom-radio__label').text(), $('.mobile-filters__chosen-filters'), 'product-filter__item--type');
+            //addFilter($(this).find('.custom-radio__label').text(), $('.mobile-filters__chosen-filters'), 'product-filter__item--type');
         }
     })
 
-    $('.js-checkbox').on('click',function () {
+    $(document).on('click', '.js-checkbox', function () {
         $(this).toggleClass('checked').find('.custom-cb-badge').toggleClass('checked');
+        let isChecked = $(this).find('.custom-checkbox').prop('checked');
         $(this).find('.custom-checkbox').prop('checked', !isChecked);
+        $(this).find('.custom-checkbox').attr('checked', !isChecked);
     });
 
-    $('.js-filter-checkbox').on('click',function () {
+    $(document).on('click', '.js-filter-checkbox', function () {
         $(this).toggleClass('checked').find('.custom-cb-badge').toggleClass('checked');
         let isChecked = $(this).find('.custom-checkbox').prop('checked');
         let isAllowed = true;
@@ -412,40 +377,34 @@ $(document).ready(function () {
                 }
             });
             if (isAllowed) {
-                addFilter(filterText, $('.mobile-filters__chosen-filters'));
+                //addFilter(filterText, $('.mobile-filters__chosen-filters'));
             }
         }
     });
 
-    $('.js-popup-apply').on('click', function (e) {
+    $(document).on('click', '.js-popup-apply', function (e) {
         e.preventDefault();
-        $(this).parents('.product-filter__items-box').find('.js-filter-item').remove();
+        //$(this).parents('.product-filter__items-box').find('.js-filter-item').remove();
         $(this).parents('.js-popup').find('.js-filter-checkbox').each(function () {
             if ($(this).hasClass('checked')) {
-                addFilter($(this).find('.custom-checkbox__label').text(), $(this).parents('.product-filter__items-box'));
+                //addFilter($(this).find('.custom-checkbox__label').text(), $(this).parents('.product-filter__items-box'));
             }
         });
         closePopup($(this).parents('.js-popup'));
     });
 
-    $('.js-sort-item').on('click', function () {
+    $(document).on('click', '.js-sort-item', function () {
         $(this).parents('.product-filter__sortby').find('.js-sort-text').text($(this).text())
         closePopup($(this).parents('.js-popup'));
     });
 
-    $('.js-clear-filter').on('click', function () {
-        $('.product-filter__item').remove();
-        $('.form-group').removeClass('checked');
-        $('.js-custom-cb').removeClass('checked');
-        $('.js-radio').removeClass('choosen');
-        $('.product-filter__item input').prop('checked', false);
-    });
 
-    $('.js-filter-item').on('click', function () {
-        removeFilterItem($(this), $(this).find('span').text())
-    })
 
-    $('.js-custom-select .custom-select-option').on('click', function () {
+    // $('.js-filter-item').on('click', function () {
+    //     removeFilterItem($(this), $(this).find('span').text())
+    // })
+
+    $(document).on('click', '.js-custom-select .custom-select-option', function () {
         let optionValue = $(this).text();
         let customSelect = $(this).parents('.js-custom-select');
         customSelect.find('.custom-select__value').text(optionValue);
@@ -454,21 +413,21 @@ $(document).ready(function () {
         }, 50);
         customSelect.find('option').each(function () {
             if ($(this).text() === optionValue) {
-                customSelect.find('select').val(optionValue).change();
+                customSelect.find('select').val($(this).attr('value')).change();
             }
         })
     })
 
-    $('.js-qnty-minus').on('click', function () {
+    $(document).on('click', '.js-qnty-minus', function () {
         let customNum = $(this).siblings('.js-qnty-num');
         if (customNum.val() >= 2 ) {
-            customNum.val(Number(customNum.val()) - 1);
+            customNum.val(Number(customNum.val()) - 1).change();
         }
     })
 
-    $('.js-qnty-plus').on('click', function () {
+    $(document).on('click', '.js-qnty-plus', function () {
         let customNum = $(this).siblings('.js-qnty-num')
-        customNum.val(Number(customNum.val()) + 1);
+        customNum.val(Number(customNum.val()) + 1).change();
     })
 
     /* END  Inputs */
@@ -548,13 +507,16 @@ $(document).ready(function () {
                             shopElem.className = "form-group form-group--radio js-radio";
                             shopElem.innerHTML = `
                             <label class="custom-radio__label" for="modal-radio[${objectsCounter}]">${shop.name}</label>
-                            <input class="custom-radio" type="radio" name="form-group-radio" id="modal-radio[${objectsCounter}]">`
+                            <input class="custom-radio js-shop-input" type="radio" name="form-group-radio" value="${shop.id}" id="modal-radio[${objectsCounter}]">`
                             shopElem.addEventListener('click', function () {
                                 this.closest('.shops__list').querySelectorAll('.js-radio').forEach(function (item) {
                                     item.classList.remove('choosen');
                                 })
                                 this.classList.add('choosen');
+
                                 this.querySelector('.custom-radio').checked = true;
+
+                                $(this).find('.js-shop-input').trigger('change')
                             })
                             shopsWrapper.append(shopElem);
                         }
@@ -564,19 +526,19 @@ $(document).ready(function () {
                             shopElem.innerHTML = `
                                 <div class="shops__item-inner shops__item-address">
                                     <svg class="icon icon-marker">
-                                        <use xlink:href="img/svg/sprite.svg#marker"></use>
+                                        <use xlink:href="/img/svg/sprite.svg#marker"></use>
                                     </svg>
                                     ${shop.address}
                                 </div>
                                 <div class="shops__item-inner shops__item-worktime">
                                     <svg class="icon icon-marker">
-                                        <use xlink:href="img/svg/sprite.svg#clock"></use>
+                                        <use xlink:href="/img/svg/sprite.svg#clock"></use>
                                     </svg>
                                     Режим работы ${shop.worktime}
                                 </div>
                                 <a href="tel:${shop.phone}" class=" shops__item-inner shops__item-phone">
                                     <svg class="icon icon-marker">
-                                        <use xlink:href="img/svg/sprite.svg#phone2"></use>
+                                        <use xlink:href="/img/svg/sprite.svg#phone2"></use>
                                     </svg>
                                     ${shop.phone}
                                 </a>`
@@ -716,7 +678,7 @@ $(document).ready(function () {
 
 
 
-    $('.js-open-popup').on('click', function () {
+    $(document).on('click', '.js-open-popup', function () {
         $('.js-open-popup').removeClass('opened');
         let popup = $(this).parent().find('.js-popup');
         popup.toggleClass('opened');
@@ -769,6 +731,7 @@ $(document).ready(function () {
 
     $('.js-clickable-star').on('click', function () {
         $(this).parents('.js-stars').attr('data-rating', $(this).index() + 1);
+        $(this).parents('.js-stars').find('.js-input-stars').val($(this).index() + 1);
         colorStars($(this).parents('.js-stars'));
     });
 
