@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-
-
     /* Menu Dropdown */
     $('.js-menu-dropdown').on('mouseover', function () {
         $('.js-menu-dropdown').removeClass('active');
